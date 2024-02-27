@@ -1,0 +1,426 @@
+[
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "spotify",
+        "importPath": "src",
+        "description": "src",
+        "isExtraImport": true,
+        "detail": "src",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "lines_with_word_occurrences",
+        "importPath": "src.word_finder",
+        "description": "src.word_finder",
+        "isExtraImport": true,
+        "detail": "src.word_finder",
+        "documentation": {}
+    },
+    {
+        "label": "factorial",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "randint",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "get_command_help",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "def get_command_help(data_path) -> str:\n    return f\"\"\"\nAnalise informações do Spotify baseado no arquivo '{data_path}'.\nModo de uso:\n    python3 src/spotify.py [ opção ]\n{get_command_options()}\n\"\"\"\ndef get_invalid_option_help(option):\n    return f\"\"\"\nOpção {repr(option)} inválida.",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "get_invalid_option_help",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "def get_invalid_option_help(option):\n    return f\"\"\"\nOpção {repr(option)} inválida.\n{get_command_options()}\n\"\"\"\ndef get_command_options() -> str:\n    return \"\"\"\nAs opções são:\n    1 - Mostrar as top 10 músicas mais instrumentais no Spotify\n    2 - Mostrar as top 10 músicas mais dançantes no Spotify",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "get_command_options",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "def get_command_options() -> str:\n    return \"\"\"\nAs opções são:\n    1 - Mostrar as top 10 músicas mais instrumentais no Spotify\n    2 - Mostrar as top 10 músicas mais dançantes no Spotify\n    3 - Mostrar as top 10 músicas mais enérgicas no Spotify\"\"\"\ndef read_csv(path: str) -> List[Dict[str, str]]:\n    \"\"\"read csv file and return list of dictionaries\"\"\"\n    with open(path, \"r\") as file:\n        return list(csv.DictReader(file))",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "read_csv",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "def read_csv(path: str) -> List[Dict[str, str]]:\n    \"\"\"read csv file and return list of dictionaries\"\"\"\n    with open(path, \"r\") as file:\n        return list(csv.DictReader(file))\ndef get_most_instrumental_songs(\n    data: List[Dict[str, str]]\n) -> List[Dict[str, str]]:\n    return sorted(\n        data, key=lambda x: float(x[\"Instrumentalness\"]), reverse=True\n    )[:10]",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "get_most_instrumental_songs",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "def get_most_instrumental_songs(\n    data: List[Dict[str, str]]\n) -> List[Dict[str, str]]:\n    return sorted(\n        data, key=lambda x: float(x[\"Instrumentalness\"]), reverse=True\n    )[:10]\ndef get_most_danceable_songs(\n    data: List[Dict[str, str]]\n) -> List[Dict[str, str]]:\n    return sorted(data, key=lambda x: float(x[\"Danceability\"]), reverse=True)[",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "get_most_danceable_songs",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "def get_most_danceable_songs(\n    data: List[Dict[str, str]]\n) -> List[Dict[str, str]]:\n    return sorted(data, key=lambda x: float(x[\"Danceability\"]), reverse=True)[\n        :10\n    ]\ndef get_most_energetic_songs(\n    data: List[Dict[str, str]]\n) -> List[Dict[str, str]]:\n    return sorted(data, key=lambda x: float(x[\"Energy\"]), reverse=True)[:10]",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "get_most_energetic_songs",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "def get_most_energetic_songs(\n    data: List[Dict[str, str]]\n) -> List[Dict[str, str]]:\n    return sorted(data, key=lambda x: float(x[\"Energy\"]), reverse=True)[:10]\nOPTIONS = {\n    \"1\": (\"instrumentais\", get_most_instrumental_songs),\n    \"2\": (\"dançantes\", get_most_danceable_songs),\n    \"3\": (\"enérgicas\", get_most_energetic_songs),\n}\ndef process_music_analysis(data, option) -> None:",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "process_music_analysis",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "def process_music_analysis(data, option) -> None:\n    print(f\"Top 10 músicas mais {OPTIONS[option][0]}:\")\n    for index, song in enumerate(OPTIONS[option][1](data), start=1):\n        print(f\"{index:>2} - '{song['Track']}' de {song['Artist']}\")\ndef handle_user_input(data, option) -> None:\n    if option not in OPTIONS:\n        print(get_invalid_option_help(option))\n        raise ValueError\n    else:\n        process_music_analysis(data, option)",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "handle_user_input",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "def handle_user_input(data, option) -> None:\n    if option not in OPTIONS:\n        print(get_invalid_option_help(option))\n        raise ValueError\n    else:\n        process_music_analysis(data, option)\ndef main(file_path) -> int:\n    cli_args = sys.argv[1:]\n    if not cli_args:\n        print(get_command_help(file_path))",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "def main(file_path) -> int:\n    cli_args = sys.argv[1:]\n    if not cli_args:\n        print(get_command_help(file_path))\n        return 1\n    \"\"\"recebe o arquivo spotify como uma lista de dicionários do tipo string\"\"\"\n    data = read_csv(file_path)\n    try:\n        handle_user_input(data, cli_args[0])\n    except ValueError:",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "DATA_PATH",
+        "kind": 5,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "DATA_PATH = \"data/spotify.csv\"\ndef get_command_help(data_path) -> str:\n    return f\"\"\"\nAnalise informações do Spotify baseado no arquivo '{data_path}'.\nModo de uso:\n    python3 src/spotify.py [ opção ]\n{get_command_options()}\n\"\"\"\ndef get_invalid_option_help(option):\n    return f\"\"\"",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "OPTIONS",
+        "kind": 5,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "peekOfCode": "OPTIONS = {\n    \"1\": (\"instrumentais\", get_most_instrumental_songs),\n    \"2\": (\"dançantes\", get_most_danceable_songs),\n    \"3\": (\"enérgicas\", get_most_energetic_songs),\n}\ndef process_music_analysis(data, option) -> None:\n    print(f\"Top 10 músicas mais {OPTIONS[option][0]}:\")\n    for index, song in enumerate(OPTIONS[option][1](data), start=1):\n        print(f\"{index:>2} - '{song['Track']}' de {song['Artist']}\")\ndef handle_user_input(data, option) -> None:",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.spotify",
+        "documentation": {}
+    },
+    {
+        "label": "lines_with_word_occurrences",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.word_finder",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.word_finder",
+        "peekOfCode": "def lines_with_word_occurrences(file_path: str, word: str):\n    str_lines = read_file_lines(file_path)\n    result = []\n    count_index = 0\n    for index in range(1, 34):\n        print(index)\n        count_index += 1\n        if word.casefold() in str_lines[count_index - 1].casefold():\n            result.append(count_index)\n        else:",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.word_finder",
+        "documentation": {}
+    },
+    {
+        "label": "read_file_lines",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.word_finder",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.word_finder",
+        "peekOfCode": "def read_file_lines(file_path):\n    with open(file_path, \"r\") as file:\n        file_content = file.read()\n    return file_content.split()\ndef main():\n    file_path = \"data/word_finder.txt\"\n    search_word = \"python\"\n    occurrences = lines_with_word_occurrences(file_path, search_word)\n    print(\n        f'A palavra \"{search_word}\" ocorre nas seguintes linhas do arquivo:',",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.word_finder",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.word_finder",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.word_finder",
+        "peekOfCode": "def main():\n    file_path = \"data/word_finder.txt\"\n    search_word = \"python\"\n    occurrences = lines_with_word_occurrences(file_path, search_word)\n    print(\n        f'A palavra \"{search_word}\" ocorre nas seguintes linhas do arquivo:',\n        occurrences,\n    )\nif __name__ == \"__main__\":\n    main()",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.src.word_finder",
+        "documentation": {}
+    },
+    {
+        "label": "sample_reader",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "def sample_reader(path):\n    with open(path, \"r\") as file:\n        return list(csv.DictReader(file))\n@patch(\"src.spotify.read_csv\")\n@patch.object(sys, \"argv\", [\"script-name\"])\ndef test_spotify_analyzer_main_no_option(mock_reader, capsys):\n    exit_code = spotify.main(TEST_DATA_PATH)\n    assert exit_code == 1\n    captured = capsys.readouterr()\n    mock_reader.assert_not_called()",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "test_spotify_analyzer_main_no_option",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "def test_spotify_analyzer_main_no_option(mock_reader, capsys):\n    exit_code = spotify.main(TEST_DATA_PATH)\n    assert exit_code == 1\n    captured = capsys.readouterr()\n    mock_reader.assert_not_called()\n    assert \"Modo de uso:\\n    python3 src/spotify.py [ opção ]\" in captured.out\n@patch.object(sys, \"argv\", [\"script-name\", \"INVALID\"])\ndef test_spotify_analyzer_invalid_option(capsys):\n    res = spotify.main(TEST_DATA_PATH)\n    assert res == 1",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "test_spotify_analyzer_invalid_option",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "def test_spotify_analyzer_invalid_option(capsys):\n    res = spotify.main(TEST_DATA_PATH)\n    assert res == 1\n    captured = capsys.readouterr()\n    assert \"Opção 'INVALID' inválida.\" in captured.out\n@patch.object(sys, \"argv\", [\"script-name\", \"1\"])\n@patch(\"src.spotify.handle_user_input\")\n@patch(\"src.spotify.read_csv\")\n@patch(\"src.spotify.process_music_analysis\")\ndef test_spotify_analyzer_valid_option(",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "test_spotify_analyzer_valid_option",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "def test_spotify_analyzer_valid_option(\n    mock_processer, mock_reader, mock_handler\n):\n    res = spotify.main(TEST_DATA_PATH)\n    assert res == 0\n    mock_reader.assert_called_once_with(TEST_DATA_PATH)\n    mock_handler.assert_called_once_with(mock_reader.return_value, \"1\")\n@patch.object(sys, \"argv\", [\"script-name\", \"2\"])\ndef test_spotify_analyzer_integration(capsys):\n    res = spotify.main(TEST_DATA_PATH)",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "test_spotify_analyzer_integration",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "def test_spotify_analyzer_integration(capsys):\n    res = spotify.main(TEST_DATA_PATH)\n    assert res == 0\n    captured = capsys.readouterr()\n    assert captured.out == (\n        \"Top 10 músicas mais dançantes:\\n\"\n        \" 1 - 'Give It To Me' de Timbaland\\n\"\n        \" 2 - 'GIRL LIKE ME' de Black Eyed Peas\\n\"\n        \" 3 - 'Blueberry Yum Yum' de Ludacris\\n\"\n        \" 4 - 'Around the World' de Daft Punk\\n\"",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "test_spotify_handler_calls_processor",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "def test_spotify_handler_calls_processor(mock_processor):\n    csv_data = [{\"fake_key\": \"fake_value\"}]\n    spotify.handle_user_input(csv_data, \"1\")\n    mock_processor.assert_called_once_with(csv_data, \"1\")\ndef test_spotify_handler_raises_when_invalid_option():\n    csv_data = [{\"fake_key\": \"fake_value\"}]\n    with pytest.raises(ValueError):\n        spotify.handle_user_input(csv_data, \"INVALID\")\ndef test_spotify_processor_calls_get_most_instrumental_songs():\n    csv_data = sample_reader(TEST_DATA_PATH)",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "test_spotify_handler_raises_when_invalid_option",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "def test_spotify_handler_raises_when_invalid_option():\n    csv_data = [{\"fake_key\": \"fake_value\"}]\n    with pytest.raises(ValueError):\n        spotify.handle_user_input(csv_data, \"INVALID\")\ndef test_spotify_processor_calls_get_most_instrumental_songs():\n    csv_data = sample_reader(TEST_DATA_PATH)\n    res = spotify.get_most_instrumental_songs(csv_data)\n    for i in range(len(res) - 1):\n        assert res[i][\"Instrumentalness\"] >= res[i + 1][\"Instrumentalness\"]\ndef test_spotify_processor_calls_get_most_danceable_songs():",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "test_spotify_processor_calls_get_most_instrumental_songs",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "def test_spotify_processor_calls_get_most_instrumental_songs():\n    csv_data = sample_reader(TEST_DATA_PATH)\n    res = spotify.get_most_instrumental_songs(csv_data)\n    for i in range(len(res) - 1):\n        assert res[i][\"Instrumentalness\"] >= res[i + 1][\"Instrumentalness\"]\ndef test_spotify_processor_calls_get_most_danceable_songs():\n    csv_data = sample_reader(TEST_DATA_PATH)\n    res = spotify.get_most_danceable_songs(csv_data)\n    for i in range(len(res) - 1):\n        assert res[i][\"Danceability\"] >= res[i + 1][\"Danceability\"]",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "test_spotify_processor_calls_get_most_danceable_songs",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "def test_spotify_processor_calls_get_most_danceable_songs():\n    csv_data = sample_reader(TEST_DATA_PATH)\n    res = spotify.get_most_danceable_songs(csv_data)\n    for i in range(len(res) - 1):\n        assert res[i][\"Danceability\"] >= res[i + 1][\"Danceability\"]\ndef test_spotify_processor_calls_get_most_energetic_songs():\n    csv_data = sample_reader(TEST_DATA_PATH)\n    res = spotify.get_most_energetic_songs(csv_data)\n    for i in range(len(res) - 1):\n        assert res[i][\"Energy\"] >= res[i + 1][\"Energy\"]",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "test_spotify_processor_calls_get_most_energetic_songs",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "def test_spotify_processor_calls_get_most_energetic_songs():\n    csv_data = sample_reader(TEST_DATA_PATH)\n    res = spotify.get_most_energetic_songs(csv_data)\n    for i in range(len(res) - 1):\n        assert res[i][\"Energy\"] >= res[i + 1][\"Energy\"]\n@pytest.mark.dependency(\n    depends=[\n        \"test_spotify_analyzer_main_no_option\",\n        \"test_spotify_analyzer_invalid_option\",\n        \"test_spotify_analyzer_valid_option\",",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "test_spotify_final",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "def test_spotify_final():\n    pass",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_DATA_PATH",
+        "kind": 5,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "TEST_DATA_PATH = \"tests/test_data/spotify.csv\"\npytestmark = pytest.mark.dependency()\ndef sample_reader(path):\n    with open(path, \"r\") as file:\n        return list(csv.DictReader(file))\n@patch(\"src.spotify.read_csv\")\n@patch.object(sys, \"argv\", [\"script-name\"])\ndef test_spotify_analyzer_main_no_option(mock_reader, capsys):\n    exit_code = spotify.main(TEST_DATA_PATH)\n    assert exit_code == 1",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "pytestmark",
+        "kind": 5,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "peekOfCode": "pytestmark = pytest.mark.dependency()\ndef sample_reader(path):\n    with open(path, \"r\") as file:\n        return list(csv.DictReader(file))\n@patch(\"src.spotify.read_csv\")\n@patch.object(sys, \"argv\", [\"script-name\"])\ndef test_spotify_analyzer_main_no_option(mock_reader, capsys):\n    exit_code = spotify.main(TEST_DATA_PATH)\n    assert exit_code == 1\n    captured = capsys.readouterr()",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_spotify",
+        "documentation": {}
+    },
+    {
+        "label": "test_lines_with_word_occurrences",
+        "kind": 2,
+        "importPath": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_word_finder",
+        "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_word_finder",
+        "peekOfCode": "def test_lines_with_word_occurrences():\n    file_path = \"tests/test_data/word_finder.txt\"\n    search_word = \"python\"\n    occurrences = lines_with_word_occurrences(file_path, search_word)\n    assert occurrences == [1, 2, 3, 4, 6, 8]",
+        "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_word_finder",
+        "documentation": {}
+    },
+    {
+        "label": "mean",
+        "kind": 2,
+        "importPath": "doctests",
+        "description": "doctests",
+        "peekOfCode": "def mean(numbers: List) -> float:\n    \"\"\"\n    Calcula a média de uma lista de números.\n    >>> my_list = [1, 2, 3, 4, 5]\n    >>> mean(my_list)\n    3.0\n    >>> mean([2.5, 3.75, 1.25, 4])\n    2.875\n    >>> mean([])\n    0",
+        "detail": "doctests",
+        "documentation": {}
+    },
+    {
+        "label": "insertion_sort",
+        "kind": 2,
+        "importPath": "insertion_sort",
+        "description": "insertion_sort",
+        "peekOfCode": "def insertion_sort(array):\n    for i in range(1, len(array)):\n        current_value = array[i]\n        position = i\n        while position > 0 and array[position - 1] > current_value:\n            array[position] = array[position - 1]\n            position -= 1\n        array[position] = current_value\n    return array\ndef main():",
+        "detail": "insertion_sort",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "insertion_sort",
+        "description": "insertion_sort",
+        "peekOfCode": "def main():\n    array = [23, 423, 1, 54, 8, 980, 45, 768, 34, 55, 88, 99, 100, 234, 567]\n    sorted_array = insertion_sort(array)\n    print(f\"Array ordenado: {sorted_array}\")\nif __name__ == \"__main__\":\n    main()",
+        "detail": "insertion_sort",
+        "documentation": {}
+    },
+    {
+        "label": "map_factorial",
+        "kind": 2,
+        "importPath": "testando",
+        "description": "testando",
+        "peekOfCode": "def map_factorial(numbers):\n    result = []\n    for num in numbers:\n        result.append(factorial(num))\n    return result\ndef main():\n    input_list = [1, 2, 3, 4, 5]\n    return map_factorial(input_list)\nif __name__ == \"__main__\":\n    print(main())",
+        "detail": "testando",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "testando",
+        "description": "testando",
+        "peekOfCode": "def main():\n    input_list = [1, 2, 3, 4, 5]\n    return map_factorial(input_list)\nif __name__ == \"__main__\":\n    print(main())",
+        "detail": "testando",
+        "documentation": {}
+    },
+    {
+        "label": "generate_int_description",
+        "kind": 2,
+        "importPath": "text_to_speech",
+        "description": "text_to_speech",
+        "peekOfCode": "def generate_int_description(integer):\n    \"\"\"Transformar digitos de número em texto PT-BR\"\"\"\n    digits = list(str(integer))\n    description = f\"{DIGITS_MAP.get(int(digits[0]))}\"\n    for digit in digits[1:]:\n        description += f\" {DIGITS_MAP.get(int(digit))}\"\n    return description\ndef main():\n    integer = randint(10000, 99999)\n    description = generate_int_description(integer)",
+        "detail": "text_to_speech",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "text_to_speech",
+        "description": "text_to_speech",
+        "peekOfCode": "def main():\n    integer = randint(10000, 99999)\n    description = generate_int_description(integer)\n    print(f\"Descrição do número{integer}: {description}\")\nif __name__ == \"__main__\":\n    main()",
+        "detail": "text_to_speech",
+        "documentation": {}
+    },
+    {
+        "label": "DIGITS_MAP",
+        "kind": 5,
+        "importPath": "text_to_speech",
+        "description": "text_to_speech",
+        "peekOfCode": "DIGITS_MAP = {\n    0: \"zero\",\n    1: \"um\",\n    2: \"dois\",\n    3: \"três\",\n    4: \"quatro\",\n    5: \"cinco\",\n    6: \"seis\",\n    7: \"sete\",\n    8: \"oito\",",
+        "detail": "text_to_speech",
+        "documentation": {}
+    }
+]
