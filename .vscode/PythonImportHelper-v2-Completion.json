@@ -9,12 +9,11 @@
         "documentation": {}
     },
     {
-        "label": "sys",
-        "kind": 6,
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -34,11 +33,12 @@
         "documentation": {}
     },
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "sys",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "typing",
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
         "documentation": {}
     },
     {
@@ -88,6 +88,33 @@
         "description": "random",
         "isExtraImport": true,
         "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "csv_for_tuple_list",
+        "kind": 2,
+        "importPath": "Doctests.csv_for_tuple_list",
+        "description": "Doctests.csv_for_tuple_list",
+        "peekOfCode": "def csv_for_tuple_list(path_file):\n    with open(path_file, \"r\") as file:\n        content_file = csv.DictReader(file)\n        tuple_list = []\n        for row in content_file:\n            for word in row.items():\n                if None not in word:\n                    tuple_list.append(word)\n    print(tuple_list)\ncsv_for_tuple_list(\"text.csv\")",
+        "detail": "Doctests.csv_for_tuple_list",
+        "documentation": {}
+    },
+    {
+        "label": "mean",
+        "kind": 2,
+        "importPath": "Doctests.doctests",
+        "description": "Doctests.doctests",
+        "peekOfCode": "def mean(numbers: List) -> float:\n    \"\"\"\n    Calcula a média de uma lista de números.\n    >>> my_list = [1, 2, 3, 4, 5]\n    >>> mean(my_list)\n    3.0\n    >>> mean([2.5, 3.75, 1.25, 4])\n    2.875\n    >>> mean([])\n    0",
+        "detail": "Doctests.doctests",
+        "documentation": {}
+    },
+    {
+        "label": "sum_two_numbers",
+        "kind": 2,
+        "importPath": "Doctests.sum_two_numbers",
+        "description": "Doctests.sum_two_numbers",
+        "peekOfCode": "def sum_two_numbers(a, b):\n    \"\"\"Retorna a soma de dois números recebidos por parâmetro\n    Exemplos\n    --------\n    >>> sum_two_numbers(0,0)\n    0\n    >>> sum_two_numbers(2, 2)\n    4\n    \"\"\"\n    return a + b",
+        "detail": "Doctests.sum_two_numbers",
         "documentation": {}
     },
     {
@@ -349,15 +376,6 @@
         "description": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_word_finder",
         "peekOfCode": "def test_lines_with_word_occurrences():\n    file_path = \"tests/test_data/word_finder.txt\"\n    search_word = \"python\"\n    occurrences = lines_with_word_occurrences(file_path, search_word)\n    assert occurrences == [1, 2, 3, 4, 6, 8]",
         "detail": "the_bug_hunting.python-001-exercicio-the-bug-hunting.tests.test_word_finder",
-        "documentation": {}
-    },
-    {
-        "label": "mean",
-        "kind": 2,
-        "importPath": "doctests",
-        "description": "doctests",
-        "peekOfCode": "def mean(numbers: List) -> float:\n    \"\"\"\n    Calcula a média de uma lista de números.\n    >>> my_list = [1, 2, 3, 4, 5]\n    >>> mean(my_list)\n    3.0\n    >>> mean([2.5, 3.75, 1.25, 4])\n    2.875\n    >>> mean([])\n    0",
-        "detail": "doctests",
         "documentation": {}
     },
     {
