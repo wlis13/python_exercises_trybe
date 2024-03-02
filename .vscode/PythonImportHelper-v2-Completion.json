@@ -33,6 +33,79 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "fib2",
+        "importPath": "src.fibo",
+        "description": "src.fibo",
+        "isExtraImport": true,
+        "detail": "src.fibo",
+        "documentation": {}
+    },
+    {
+        "label": "fib3",
+        "importPath": "src.fibo",
+        "description": "src.fibo",
+        "isExtraImport": true,
+        "detail": "src.fibo",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "show_your_input",
+        "importPath": "src.filter",
+        "description": "src.filter",
+        "isExtraImport": true,
+        "detail": "src.filter",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -55,15 +128,6 @@
         "description": "src",
         "isExtraImport": true,
         "detail": "src",
-        "documentation": {}
-    },
-    {
-        "label": "pytest",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pytest",
-        "description": "pytest",
-        "detail": "pytest",
         "documentation": {}
     },
     {
@@ -91,30 +155,192 @@
         "documentation": {}
     },
     {
-        "label": "csv_for_tuple_list",
+        "label": "csv_for_tuple_list_file",
         "kind": 2,
-        "importPath": "Doctests.csv_for_tuple_list",
-        "description": "Doctests.csv_for_tuple_list",
-        "peekOfCode": "def csv_for_tuple_list(path_file):\n    with open(path_file, \"r\") as file:\n        content_file = csv.DictReader(file)\n        tuple_list = []\n        for row in content_file:\n            for word in row.items():\n                if None not in word:\n                    tuple_list.append(word)\n    print(tuple_list)\ncsv_for_tuple_list(\"text.csv\")",
-        "detail": "Doctests.csv_for_tuple_list",
+        "importPath": "src.csv_for_tuple_list",
+        "description": "src.csv_for_tuple_list",
+        "peekOfCode": "def csv_for_tuple_list_file(path_file):\n    with open(path_file, \"r\") as file:\n        content_file = csv.DictReader(file)\n        tuple_list = []\n        for row in content_file:\n            for tn in row.items():\n                tuple_list.append(tn)\n    return tuple_list\nprint(csv_for_tuple_list_file(\"text.csv\"))\ndef csv_for_list(path_file):",
+        "detail": "src.csv_for_tuple_list",
         "documentation": {}
     },
     {
-        "label": "mean",
+        "label": "csv_for_list",
         "kind": 2,
-        "importPath": "Doctests.doctests",
-        "description": "Doctests.doctests",
-        "peekOfCode": "def mean(numbers: List) -> float:\n    \"\"\"\n    Calcula a média de uma lista de números.\n    >>> my_list = [1, 2, 3, 4, 5]\n    >>> mean(my_list)\n    3.0\n    >>> mean([2.5, 3.75, 1.25, 4])\n    2.875\n    >>> mean([])\n    0",
-        "detail": "Doctests.doctests",
+        "importPath": "src.csv_for_tuple_list",
+        "description": "src.csv_for_tuple_list",
+        "peekOfCode": "def csv_for_list(path_file):\n    with open(path_file, \"r\") as file:\n        content_file = csv.reader(file)\n        value = []\n        for v in content_file:\n            value.append(v)\n        print(value)\ndef prime_numbers(numbers: List[int]) -> Dict[str, str]:\n    result = {}\n    for num in numbers:",
+        "detail": "src.csv_for_tuple_list",
+        "documentation": {}
+    },
+    {
+        "label": "prime_numbers",
+        "kind": 2,
+        "importPath": "src.csv_for_tuple_list",
+        "description": "src.csv_for_tuple_list",
+        "peekOfCode": "def prime_numbers(numbers: List[int]) -> Dict[str, str]:\n    result = {}\n    for num in numbers:\n        if num <= 1:\n            result[f\"{num}\"] = \"Não é primo\"\n        else:\n            count = 0\n            for tn in range(2, int(num**0.5) + 1):\n                if num % tn == 0:\n                    count += 1",
+        "detail": "src.csv_for_tuple_list",
+        "documentation": {}
+    },
+    {
+        "label": "fib",
+        "kind": 2,
+        "importPath": "src.fibo",
+        "description": "src.fibo",
+        "peekOfCode": "def fib(n: int):\n    a, b = 0, 1\n    while a < n:\n        print(a, end=\", \")\n        a, b = b, a + b\ndef fib2(n: int) -> int:\n    if n <= 1:\n        return n\n    else:\n        return fib2(n - 1) + fib2(n - 2)",
+        "detail": "src.fibo",
+        "documentation": {}
+    },
+    {
+        "label": "fib2",
+        "kind": 2,
+        "importPath": "src.fibo",
+        "description": "src.fibo",
+        "peekOfCode": "def fib2(n: int) -> int:\n    if n <= 1:\n        return n\n    else:\n        return fib2(n - 1) + fib2(n - 2)\ndef fib3(n: int) -> List[int]:\n    a, b = 0, 1\n    result = []\n    while a < n:\n        result.append(a)",
+        "detail": "src.fibo",
+        "documentation": {}
+    },
+    {
+        "label": "fib3",
+        "kind": 2,
+        "importPath": "src.fibo",
+        "description": "src.fibo",
+        "peekOfCode": "def fib3(n: int) -> List[int]:\n    a, b = 0, 1\n    result = []\n    while a < n:\n        result.append(a)\n        a, b = b, a + b\n    return result\nprint(fib3(500))",
+        "detail": "src.fibo",
+        "documentation": {}
+    },
+    {
+        "label": "filter_numbers",
+        "kind": 2,
+        "importPath": "src.filter",
+        "description": "src.filter",
+        "peekOfCode": "def filter_numbers(list_numbers: List[int]):\n    filtered_numbers = list(filter(lambda x: x > 10, list_numbers))\n    return filtered_numbers\ndef show_your_input():\n    return f\"Você digitou: {input('Digite alto: ')}!\"",
+        "detail": "src.filter",
+        "documentation": {}
+    },
+    {
+        "label": "show_your_input",
+        "kind": 2,
+        "importPath": "src.filter",
+        "description": "src.filter",
+        "peekOfCode": "def show_your_input():\n    return f\"Você digitou: {input('Digite alto: ')}!\"",
+        "detail": "src.filter",
+        "documentation": {}
+    },
+    {
+        "label": "list_numbers",
+        "kind": 5,
+        "importPath": "src.filter",
+        "description": "src.filter",
+        "peekOfCode": "list_numbers = [1, 2, 5, 8, 100, 20, 65, 89]\ndef filter_numbers(list_numbers: List[int]):\n    filtered_numbers = list(filter(lambda x: x > 10, list_numbers))\n    return filtered_numbers\ndef show_your_input():\n    return f\"Você digitou: {input('Digite alto: ')}!\"",
+        "detail": "src.filter",
+        "documentation": {}
+    },
+    {
+        "label": "test_sum_numbers",
+        "kind": 2,
+        "importPath": "tests.a_test",
+        "description": "tests.a_test",
+        "peekOfCode": "def test_sum_numbers(my_list):\n    assert sum(my_list) == 6\ndef test_fib3():\n    result = fib3(8)\n    assert result == [0, 1, 1, 2, 3, 5]\ndef test_fib2():\n    result = fib2(10)\n    assert result == 55",
+        "detail": "tests.a_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_fib3",
+        "kind": 2,
+        "importPath": "tests.a_test",
+        "description": "tests.a_test",
+        "peekOfCode": "def test_fib3():\n    result = fib3(8)\n    assert result == [0, 1, 1, 2, 3, 5]\ndef test_fib2():\n    result = fib2(10)\n    assert result == 55",
+        "detail": "tests.a_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_fib2",
+        "kind": 2,
+        "importPath": "tests.a_test",
+        "description": "tests.a_test",
+        "peekOfCode": "def test_fib2():\n    result = fib2(10)\n    assert result == 55",
+        "detail": "tests.a_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_sum_elements",
+        "kind": 2,
+        "importPath": "tests.another_test",
+        "description": "tests.another_test",
+        "peekOfCode": "def test_sum_elements(my_list):\n    assert [num * 3 for num in my_list] == [3, 6, 9]",
+        "detail": "tests.another_test",
+        "documentation": {}
+    },
+    {
+        "label": "my_list",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def my_list() -> List[int]:\n    return [1, 2, 3]",
+        "detail": "tests.conftest",
         "documentation": {}
     },
     {
         "label": "sum_two_numbers",
         "kind": 2,
-        "importPath": "Doctests.sum_two_numbers",
-        "description": "Doctests.sum_two_numbers",
+        "importPath": "tests.doctests",
+        "description": "tests.doctests",
         "peekOfCode": "def sum_two_numbers(a, b):\n    \"\"\"Retorna a soma de dois números recebidos por parâmetro\n    Exemplos\n    --------\n    >>> sum_two_numbers(0,0)\n    0\n    >>> sum_two_numbers(2, 2)\n    4\n    \"\"\"\n    return a + b",
-        "detail": "Doctests.sum_two_numbers",
+        "detail": "tests.doctests",
+        "documentation": {}
+    },
+    {
+        "label": "mean",
+        "kind": 2,
+        "importPath": "tests.doctests",
+        "description": "tests.doctests",
+        "peekOfCode": "def mean(numbers: List[int]) -> float:\n    \"\"\"\n    Calcula a média de uma lista de números.\n    >>> my_list = [1, 2, 3, 4, 5]\n    >>> mean(my_list)\n    3.0\n    >>> mean([2.5, 3.75, 1.25, 4])\n    2.875\n    >>> mean([])\n    Divisão por zero.",
+        "detail": "tests.doctests",
+        "documentation": {}
+    },
+    {
+        "label": "sum_list",
+        "kind": 2,
+        "importPath": "tests.doctests",
+        "description": "tests.doctests",
+        "peekOfCode": "def sum_list(list: List[int]) -> int:\n    \"\"\"\n    Retorna a soma dos inteiros de uma lista\n    >>> sum_list([1,2,3,4,5])\n    15\n    >>> sum_list([45, 45, 10, 50])\n    150\n    \"\"\"\n    total = 0\n    for n in list:",
+        "detail": "tests.doctests",
+        "documentation": {}
+    },
+    {
+        "label": "test_print_to_stdout",
+        "kind": 2,
+        "importPath": "tests.fixtures_test",
+        "description": "tests.fixtures_test",
+        "peekOfCode": "def test_print_to_stdout(capsys):\n    print(\"Hello World!\")\n    captured = capsys.readouterr()\n    assert captured.out == \"Hello World!\\n\"\ndef test_error_to_stderr(capsys):\n    import sys\n    sys.stderr.write(\"Error message\\n\")\n    captured = capsys.readouterr()\n    assert captured.err == \"Error message\\n\"\ndef test_show_your_digit(monkeypatch):",
+        "detail": "tests.fixtures_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_error_to_stderr",
+        "kind": 2,
+        "importPath": "tests.fixtures_test",
+        "description": "tests.fixtures_test",
+        "peekOfCode": "def test_error_to_stderr(capsys):\n    import sys\n    sys.stderr.write(\"Error message\\n\")\n    captured = capsys.readouterr()\n    assert captured.err == \"Error message\\n\"\ndef test_show_your_digit(monkeypatch):\n    def mock_input(_):\n        return \"Python\"\n    monkeypatch.setattr(\"builtins.input\", mock_input)\n    output = show_your_input()",
+        "detail": "tests.fixtures_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_show_your_digit",
+        "kind": 2,
+        "importPath": "tests.fixtures_test",
+        "description": "tests.fixtures_test",
+        "peekOfCode": "def test_show_your_digit(monkeypatch):\n    def mock_input(_):\n        return \"Python\"\n    monkeypatch.setattr(\"builtins.input\", mock_input)\n    output = show_your_input()\n    assert output == \"Você digitou: Python!\"",
+        "detail": "tests.fixtures_test",
+        "documentation": {}
+    },
+    {
+        "label": "mean",
+        "kind": 2,
+        "importPath": "tests.main",
+        "description": "tests.main",
+        "peekOfCode": "def mean(numbers):\n    \"\"\"\n    Calcula a média de uma lista de números.\n    >>> my_list = [1, 2, 3, 4, 5]\n    >>> mean(my_list)\n    3.0\n    >>> mean([2.5, 3.75, 1.25, 4])\n    2.875\n    >>> mean([])\n    Traceback (most recent call last):",
+        "detail": "tests.main",
         "documentation": {}
     },
     {
