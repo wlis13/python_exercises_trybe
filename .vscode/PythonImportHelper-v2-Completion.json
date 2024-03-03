@@ -1,5 +1,77 @@
 [
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "csv",
         "kind": 6,
         "isExtraImport": true,
@@ -9,83 +81,21 @@
         "documentation": {}
     },
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "json",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "typing",
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "os",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "fib2",
-        "importPath": "src.fibo",
-        "description": "src.fibo",
-        "isExtraImport": true,
-        "detail": "src.fibo",
-        "documentation": {}
-    },
-    {
-        "label": "fib3",
-        "importPath": "src.fibo",
-        "description": "src.fibo",
-        "isExtraImport": true,
-        "detail": "src.fibo",
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
@@ -98,20 +108,21 @@
         "documentation": {}
     },
     {
-        "label": "show_your_input",
-        "importPath": "src.filter",
-        "description": "src.filter",
-        "isExtraImport": true,
-        "detail": "src.filter",
-        "documentation": {}
-    },
-    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -155,11 +166,29 @@
         "documentation": {}
     },
     {
+        "label": "asterisks",
+        "kind": 2,
+        "importPath": "src.other_modules.asterisks",
+        "description": "src.other_modules.asterisks",
+        "peekOfCode": "def asterisks(list: List[int]) -> str:\n    result = \"\"\n    for n in list:\n        result += \"*\" * len(list)\n        if n < len(list):\n            result += \"\\n\"\n    return result\ndef other_asterisks(number: int) -> str:\n    result = \"\"\n    for n in range(number):",
+        "detail": "src.other_modules.asterisks",
+        "documentation": {}
+    },
+    {
+        "label": "other_asterisks",
+        "kind": 2,
+        "importPath": "src.other_modules.asterisks",
+        "description": "src.other_modules.asterisks",
+        "peekOfCode": "def other_asterisks(number: int) -> str:\n    result = \"\"\n    for n in range(number):\n        for _ in range(number):\n            result += \"*\"\n        if n < number - 1:\n            result += \"\\n\"\n    return result",
+        "detail": "src.other_modules.asterisks",
+        "documentation": {}
+    },
+    {
         "label": "csv_for_tuple_list_file",
         "kind": 2,
         "importPath": "src.csv_for_tuple_list",
         "description": "src.csv_for_tuple_list",
-        "peekOfCode": "def csv_for_tuple_list_file(path_file):\n    with open(path_file, \"r\") as file:\n        content_file = csv.DictReader(file)\n        tuple_list = []\n        for row in content_file:\n            for tn in row.items():\n                tuple_list.append(tn)\n    return tuple_list\nprint(csv_for_tuple_list_file(\"text.csv\"))\ndef csv_for_list(path_file):",
+        "peekOfCode": "def csv_for_tuple_list_file(path_file):\n    with open(path_file, \"r\") as file:\n        content_file = csv.DictReader(file)\n        tuple_list = []\n        for row in content_file:\n            for tn in row.items():\n                tuple_list.append(tn)\n    return tuple_list\ndef csv_for_list(path_file):\n    with open(path_file, \"r\") as file:",
         "detail": "src.csv_for_tuple_list",
         "documentation": {}
     },
@@ -168,7 +197,7 @@
         "kind": 2,
         "importPath": "src.csv_for_tuple_list",
         "description": "src.csv_for_tuple_list",
-        "peekOfCode": "def csv_for_list(path_file):\n    with open(path_file, \"r\") as file:\n        content_file = csv.reader(file)\n        value = []\n        for v in content_file:\n            value.append(v)\n        print(value)\ndef prime_numbers(numbers: List[int]) -> Dict[str, str]:\n    result = {}\n    for num in numbers:",
+        "peekOfCode": "def csv_for_list(path_file):\n    with open(path_file, \"r\") as file:\n        content_file = csv.reader(file)\n        value = []\n        for v in content_file:\n            value.append(v)\n        return value\ndef prime_numbers(numbers: List[int]) -> Dict[str, str]:\n    result = {}\n    for num in numbers:",
         "detail": "src.csv_for_tuple_list",
         "documentation": {}
     },
@@ -211,28 +240,37 @@
     {
         "label": "filter_numbers",
         "kind": 2,
-        "importPath": "src.filter",
-        "description": "src.filter",
-        "peekOfCode": "def filter_numbers(list_numbers: List[int]):\n    filtered_numbers = list(filter(lambda x: x > 10, list_numbers))\n    return filtered_numbers\ndef show_your_input():\n    return f\"Você digitou: {input('Digite alto: ')}!\"",
-        "detail": "src.filter",
+        "importPath": "src.handle_numbers_and_string",
+        "description": "src.handle_numbers_and_string",
+        "peekOfCode": "def filter_numbers(list_numbers: List[int]):\n    filtered_numbers = list(filter(lambda x: x > 10, list_numbers))\n    return filtered_numbers\ndef show_your_input():\n    return f\"Você digitou: {input('Digite alto: ')}!\"\ndef generate_output(content, path):\n    with open(path, \"w\", encoding=\"utf-8\") as file:\n        file.write(json.dumps(content))",
+        "detail": "src.handle_numbers_and_string",
         "documentation": {}
     },
     {
         "label": "show_your_input",
         "kind": 2,
-        "importPath": "src.filter",
-        "description": "src.filter",
-        "peekOfCode": "def show_your_input():\n    return f\"Você digitou: {input('Digite alto: ')}!\"",
-        "detail": "src.filter",
+        "importPath": "src.handle_numbers_and_string",
+        "description": "src.handle_numbers_and_string",
+        "peekOfCode": "def show_your_input():\n    return f\"Você digitou: {input('Digite alto: ')}!\"\ndef generate_output(content, path):\n    with open(path, \"w\", encoding=\"utf-8\") as file:\n        file.write(json.dumps(content))",
+        "detail": "src.handle_numbers_and_string",
+        "documentation": {}
+    },
+    {
+        "label": "generate_output",
+        "kind": 2,
+        "importPath": "src.handle_numbers_and_string",
+        "description": "src.handle_numbers_and_string",
+        "peekOfCode": "def generate_output(content, path):\n    with open(path, \"w\", encoding=\"utf-8\") as file:\n        file.write(json.dumps(content))",
+        "detail": "src.handle_numbers_and_string",
         "documentation": {}
     },
     {
         "label": "list_numbers",
         "kind": 5,
-        "importPath": "src.filter",
-        "description": "src.filter",
-        "peekOfCode": "list_numbers = [1, 2, 5, 8, 100, 20, 65, 89]\ndef filter_numbers(list_numbers: List[int]):\n    filtered_numbers = list(filter(lambda x: x > 10, list_numbers))\n    return filtered_numbers\ndef show_your_input():\n    return f\"Você digitou: {input('Digite alto: ')}!\"",
-        "detail": "src.filter",
+        "importPath": "src.handle_numbers_and_string",
+        "description": "src.handle_numbers_and_string",
+        "peekOfCode": "list_numbers = [1, 2, 5, 8, 100, 20, 65, 89]\ndef filter_numbers(list_numbers: List[int]):\n    filtered_numbers = list(filter(lambda x: x > 10, list_numbers))\n    return filtered_numbers\ndef show_your_input():\n    return f\"Você digitou: {input('Digite alto: ')}!\"\ndef generate_output(content, path):\n    with open(path, \"w\", encoding=\"utf-8\") as file:\n        file.write(json.dumps(content))",
+        "detail": "src.handle_numbers_and_string",
         "documentation": {}
     },
     {
@@ -240,7 +278,7 @@
         "kind": 2,
         "importPath": "tests.a_test",
         "description": "tests.a_test",
-        "peekOfCode": "def test_sum_numbers(my_list):\n    assert sum(my_list) == 6\ndef test_fib3():\n    result = fib3(8)\n    assert result == [0, 1, 1, 2, 3, 5]\ndef test_fib2():\n    result = fib2(10)\n    assert result == 55",
+        "peekOfCode": "def test_sum_numbers(my_list):\n    assert sum(my_list) == 6\ndef test_fib3():\n    result = fib3(8)\n    assert result == [0, 1, 1, 2, 3, 5]\n@pytest.mark.skip(reason=\"Somente para teste\")\ndef test_fib2():\n    result = fib2(10)\n    assert result == 55\n@pytest.mark.skipif(sys.platform == \"windows\", reason=\"Não suportado no windowns\")",
         "detail": "tests.a_test",
         "documentation": {}
     },
@@ -249,7 +287,7 @@
         "kind": 2,
         "importPath": "tests.a_test",
         "description": "tests.a_test",
-        "peekOfCode": "def test_fib3():\n    result = fib3(8)\n    assert result == [0, 1, 1, 2, 3, 5]\ndef test_fib2():\n    result = fib2(10)\n    assert result == 55",
+        "peekOfCode": "def test_fib3():\n    result = fib3(8)\n    assert result == [0, 1, 1, 2, 3, 5]\n@pytest.mark.skip(reason=\"Somente para teste\")\ndef test_fib2():\n    result = fib2(10)\n    assert result == 55\n@pytest.mark.skipif(sys.platform == \"windows\", reason=\"Não suportado no windowns\")\ndef test_asterisks(high_list):\n    result = asterisks(high_list)",
         "detail": "tests.a_test",
         "documentation": {}
     },
@@ -258,7 +296,34 @@
         "kind": 2,
         "importPath": "tests.a_test",
         "description": "tests.a_test",
-        "peekOfCode": "def test_fib2():\n    result = fib2(10)\n    assert result == 55",
+        "peekOfCode": "def test_fib2():\n    result = fib2(10)\n    assert result == 55\n@pytest.mark.skipif(sys.platform == \"windows\", reason=\"Não suportado no windowns\")\ndef test_asterisks(high_list):\n    result = asterisks(high_list)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"\ndef test_other_asteriks():\n    result = other_asterisks(5)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"",
+        "detail": "tests.a_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_asterisks",
+        "kind": 2,
+        "importPath": "tests.a_test",
+        "description": "tests.a_test",
+        "peekOfCode": "def test_asterisks(high_list):\n    result = asterisks(high_list)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"\ndef test_other_asteriks():\n    result = other_asterisks(5)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"\ndef test_generate_output(tmp_path):\n    content = {\"a\": 1}\n    output_path = tmp_path / \"tes_path_lib.json\"\n    generate_output(content, output_path)",
+        "detail": "tests.a_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_other_asteriks",
+        "kind": 2,
+        "importPath": "tests.a_test",
+        "description": "tests.a_test",
+        "peekOfCode": "def test_other_asteriks():\n    result = other_asterisks(5)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"\ndef test_generate_output(tmp_path):\n    content = {\"a\": 1}\n    output_path = tmp_path / \"tes_path_lib.json\"\n    generate_output(content, output_path)\n    assert os.path.isfile(output_path)\n    with open(output_path, \"r\") as file:\n        assert file.read() == '{\"a\": 1}'",
+        "detail": "tests.a_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_generate_output",
+        "kind": 2,
+        "importPath": "tests.a_test",
+        "description": "tests.a_test",
+        "peekOfCode": "def test_generate_output(tmp_path):\n    content = {\"a\": 1}\n    output_path = tmp_path / \"tes_path_lib.json\"\n    generate_output(content, output_path)\n    assert os.path.isfile(output_path)\n    with open(output_path, \"r\") as file:\n        assert file.read() == '{\"a\": 1}'",
         "detail": "tests.a_test",
         "documentation": {}
     },
@@ -276,7 +341,25 @@
         "kind": 2,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "def my_list() -> List[int]:\n    return [1, 2, 3]",
+        "peekOfCode": "def my_list() -> List[int]:\n    return [1, 2, 3]\n@pytest.fixture\ndef high_list() -> List[int]:\n    return [1, 2, 3, 4, 5]\ndef pytest_configure(config):\n    config.addinivalue_line(\"markers\", \"slow: mark test as slow\")",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "high_list",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def high_list() -> List[int]:\n    return [1, 2, 3, 4, 5]\ndef pytest_configure(config):\n    config.addinivalue_line(\"markers\", \"slow: mark test as slow\")",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "pytest_configure",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def pytest_configure(config):\n    config.addinivalue_line(\"markers\", \"slow: mark test as slow\")",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -341,6 +424,15 @@
         "description": "tests.main",
         "peekOfCode": "def mean(numbers):\n    \"\"\"\n    Calcula a média de uma lista de números.\n    >>> my_list = [1, 2, 3, 4, 5]\n    >>> mean(my_list)\n    3.0\n    >>> mean([2.5, 3.75, 1.25, 4])\n    2.875\n    >>> mean([])\n    Traceback (most recent call last):",
         "detail": "tests.main",
+        "documentation": {}
+    },
+    {
+        "label": "test_slow_mark",
+        "kind": 2,
+        "importPath": "tests.markers_test",
+        "description": "tests.markers_test",
+        "peekOfCode": "def test_slow_mark():\n    time.sleep(4)",
+        "detail": "tests.markers_test",
         "documentation": {}
     },
     {

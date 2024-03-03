@@ -1,4 +1,4 @@
-from src.filter import show_your_input
+from ..src.handle_numbers_and_string import show_your_input
 
 
 def test_print_to_stdout(capsys):

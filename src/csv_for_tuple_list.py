@@ -13,9 +13,6 @@ def csv_for_tuple_list_file(path_file):
     return tuple_list
 
 
-print(csv_for_tuple_list_file("text.csv"))
-
-
 def csv_for_list(path_file):
     with open(path_file, "r") as file:
         content_file = csv.reader(file)
@@ -23,7 +20,7 @@ def csv_for_list(path_file):
         for v in content_file:
             value.append(v)
 
-        print(value)
+        return value
 
 
 def prime_numbers(numbers: List[int]) -> Dict[str, str]:
@@ -41,4 +38,4 @@ def prime_numbers(numbers: List[int]) -> Dict[str, str]:
             else:
                 result[f"{num}"] = "É primo."
 
-    print(result)
+    return result
