@@ -1,83 +1,188 @@
 [
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "pathlib",
         "documentation": {}
     },
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "pathlib",
         "documentation": {}
     },
     {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "csv",
+        "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "csv",
-        "description": "csv",
-        "detail": "csv",
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "# noqa: F401\n    main",
+        "importPath": "src.hex_converter",
+        "description": "src.hex_converter",
+        "isExtraImport": true,
+        "detail": "src.hex_converter",
+        "documentation": {}
+    },
+    {
+        "label": "print_hexadecimal_to_decimal",
+        "importPath": "src.hex_converter",
+        "description": "src.hex_converter",
+        "isExtraImport": true,
+        "detail": "src.hex_converter",
+        "documentation": {}
+    },
+    {
+        "label": "write_hexadecimal_to_decimal",
+        "importPath": "src.hex_converter",
+        "description": "src.hex_converter",
+        "isExtraImport": true,
+        "detail": "src.hex_converter",
+        "documentation": {}
+    },
+    {
+        "label": "hexadecimal_to_decimal",
+        "importPath": "src.hex_converter",
+        "description": "src.hex_converter",
+        "isExtraImport": true,
+        "detail": "src.hex_converter",
+        "documentation": {}
+    },
+    {
+        "label": "inspect",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "inspect",
+        "description": "inspect",
+        "detail": "inspect",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "Mock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -90,21 +195,21 @@
         "documentation": {}
     },
     {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "os",
         "description": "os",
         "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "pytest",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pytest",
-        "description": "pytest",
-        "detail": "pytest",
         "documentation": {}
     },
     {
@@ -123,14 +228,6 @@
         "importPath": "time",
         "description": "time",
         "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "patch",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
         "documentation": {}
     },
     {
@@ -166,6 +263,177 @@
         "documentation": {}
     },
     {
+        "label": "hexadecimal_to_decimal",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "peekOfCode": "def hexadecimal_to_decimal(hex_digit: str) -> int:\n    return int(hex_digit, 16)\ndef print_hexadecimal_to_decimal(hex_digit: str) -> None:\n    print(hexadecimal_to_decimal(hex_digit))\ndef write_hexadecimal_to_decimal(hex_digit: str, output_file: Path) -> None:\n    with open(output_file, \"w\") as file:\n        file.write(str(hexadecimal_to_decimal(hex_digit)))\ndef main() -> int:\n    input_number = input(\"Digite um número hexadecimal: \")\n    return hexadecimal_to_decimal(input_number)",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "documentation": {}
+    },
+    {
+        "label": "print_hexadecimal_to_decimal",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "peekOfCode": "def print_hexadecimal_to_decimal(hex_digit: str) -> None:\n    print(hexadecimal_to_decimal(hex_digit))\ndef write_hexadecimal_to_decimal(hex_digit: str, output_file: Path) -> None:\n    with open(output_file, \"w\") as file:\n        file.write(str(hexadecimal_to_decimal(hex_digit)))\ndef main() -> int:\n    input_number = input(\"Digite um número hexadecimal: \")\n    return hexadecimal_to_decimal(input_number)",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "documentation": {}
+    },
+    {
+        "label": "write_hexadecimal_to_decimal",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "peekOfCode": "def write_hexadecimal_to_decimal(hex_digit: str, output_file: Path) -> None:\n    with open(output_file, \"w\") as file:\n        file.write(str(hexadecimal_to_decimal(hex_digit)))\ndef main() -> int:\n    input_number = input(\"Digite um número hexadecimal: \")\n    return hexadecimal_to_decimal(input_number)",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "peekOfCode": "def main() -> int:\n    input_number = input(\"Digite um número hexadecimal: \")\n    return hexadecimal_to_decimal(input_number)",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.src.hex_converter",
+        "documentation": {}
+    },
+    {
+        "label": "test_monkeypatch",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "peekOfCode": "def test_monkeypatch(monkeypatch):\n    def mock_hexadecimal(_):\n        return \"a\"\n    monkeypatch.setattr(\"builtins.input\", mock_hexadecimal)\n    output = main()\n    assert output == 10\ndef test_capsys(capsys):\n    print(10)\n    captured = capsys.readouterr()\n    assert captured.out == \"10\\n\"",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_capsys",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "peekOfCode": "def test_capsys(capsys):\n    print(10)\n    captured = capsys.readouterr()\n    assert captured.out == \"10\\n\"\n    assert captured.err == \"\"\ndef test_tmp_path(tmp_path):\n    output_path = tmp_path / \"output.txt\"\n    write_hexadecimal_to_decimal(\"a\", output_path)\n    with open(output_path, \"r\") as file:\n        assert file.read() == \"10\"",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_tmp_path",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "peekOfCode": "def test_tmp_path(tmp_path):\n    output_path = tmp_path / \"output.txt\"\n    write_hexadecimal_to_decimal(\"a\", output_path)\n    with open(output_path, \"r\") as file:\n        assert file.read() == \"10\"\n# aplica o marcador de dependency para todos os testes do arquivo\npytestmark = pytest.mark.dependency  # NÃO REMOVA ESSA LINHA",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "documentation": {}
+    },
+    {
+        "label": "pytestmark",
+        "kind": 5,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "peekOfCode": "pytestmark = pytest.mark.dependency  # NÃO REMOVA ESSA LINHA",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.built_in_fixtures_test",
+        "documentation": {}
+    },
+    {
+        "label": "custom_fixture",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.conftest",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.conftest",
+        "peekOfCode": "def custom_fixture():\n    return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "test_dependency_mark",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.marker_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.marker_test",
+        "peekOfCode": "def test_dependency_mark():\n    assert True",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.marker_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_converter",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.parametrized_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.parametrized_test",
+        "peekOfCode": "def test_converter(Hexadecimal, inteiro_na_saida):\n    assert hexadecimal_to_decimal(Hexadecimal) == inteiro_na_saida",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.parametrized_test",
+        "documentation": {}
+    },
+    {
+        "label": "pytestmark",
+        "kind": 5,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.parametrized_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.parametrized_test",
+        "peekOfCode": "pytestmark = pytest.mark.dependency  # NÃO REMOVA ESSA LINHA\n@pytest.mark.parametrize(\n    \"Hexadecimal, inteiro_na_saida\",\n    {\n        (\"8\", 8),\n        (\"9\", 9),\n        (\"a\", 10),\n        (\"b\", 11),\n        (\"c\", 12),\n        (\"e\", 14),",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.parametrized_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_expecting_a_fixture",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "peekOfCode": "def test_expecting_a_fixture(custom_fixture):\n    assert custom_fixture.pop() == 10\n    assert custom_fixture.pop() == 9\n# * teste do exercício 1\n@pytest.mark.dependency(depends=[\"test_expecting_a_fixture\"])\ndef test_expecting_the_same_fixture(custom_fixture):\n    assert custom_fixture.pop() == 8\n    assert custom_fixture.pop() == 7\n    assert custom_fixture.pop() == 6\n    assert custom_fixture.pop() == 5",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_expecting_the_same_fixture",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "peekOfCode": "def test_expecting_the_same_fixture(custom_fixture):\n    assert custom_fixture.pop() == 8\n    assert custom_fixture.pop() == 7\n    assert custom_fixture.pop() == 6\n    assert custom_fixture.pop() == 5\n    assert custom_fixture.pop() == 4\n    assert custom_fixture.pop() == 3\n    assert custom_fixture.pop() == 2\n    assert custom_fixture.pop() == 1\n    assert custom_fixture == []",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_marker_dependency_mark",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "peekOfCode": "def test_marker_dependency_mark():\n    pass\n# * teste do exercício 3\n@pytest.mark.dependency(\n    depends=[\n        \"tests/parametrized_test.py::test_converter[8-8]\",\n        \"tests/parametrized_test.py::test_converter[9-9]\",\n        \"tests/parametrized_test.py::test_converter[a-10]\",\n        \"tests/parametrized_test.py::test_converter[b-11]\",\n        \"tests/parametrized_test.py::test_converter[c-12]\",",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_parametrized",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "peekOfCode": "def test_parametrized():\n    from src.hex_converter import hexadecimal_to_decimal  # noqa\n    from tests.Markers.parametrized_test import test_converter  # noqa\n    with patch(\n        \"tests.parametrized_test.hexadecimal_to_decimal\",\n        wraps=hexadecimal_to_decimal,\n    ) as mocked:\n        test_converter(\"a\", 10)\n        mocked.assert_called_once_with(\"a\")\n        with pytest.raises(AssertionError):",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_use_of_monkeypatch",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "peekOfCode": "def test_use_of_monkeypatch():\n    from tests.built_in_fixtures_test import test_monkeypatch  # noqa\n    assert \"monkeypatch\" in inspect.signature(test_monkeypatch).parameters\n    with patch(\"src.hex_converter.hexadecimal_to_decimal\") as mocked:\n        mocked.return_value = 10\n        test_monkeypatch(monkeypatch=pytest.MonkeyPatch())\n        mocked.assert_called_once_with(\"a\")\n# * teste do exercício 5\n@pytest.mark.dependency(\n    depends=[\"tests/built_in_fixtures_test.py::test_capsys\"], scope=\"session\"",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_use_of_capsys",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "peekOfCode": "def test_use_of_capsys():\n    from tests.built_in_fixtures_test import test_capsys  # noqa\n    assert \"capsys\" in inspect.signature(test_capsys).parameters\n    mock_capsys = MagicMock()\n    with pytest.raises(AssertionError):\n        test_capsys(mock_capsys)\n    mock_capsys.readouterr.return_value.out = \"INVALID\"\n    mock_capsys.readouterr.return_value.err = \"INVALID\"\n    with pytest.raises(AssertionError):\n        test_capsys(mock_capsys)",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_use_of_tmp_path",
+        "kind": 2,
+        "importPath": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "description": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "peekOfCode": "def test_use_of_tmp_path():\n    from src.hex_converter import write_hexadecimal_to_decimal  # noqa\n    from tests.built_in_fixtures_test import test_tmp_path  # noqa\n    assert \"tmp_path\" in inspect.signature(test_tmp_path).parameters\n    with pytest.raises(TypeError):\n        test_tmp_path(1)\n    def _mock_write_hexadecimal_to_decimal(hex_digit, output_file):\n        if hex_digit != \"a\":\n            raise ValueError(\n                \"Você deve testar a função `write_hexadecimal_to_decimal`\"",
+        "detail": "pytest_quest.python-001-exercicio-pytest-quest.tests.trybe_test",
+        "documentation": {}
+    },
+    {
         "label": "asterisks",
         "kind": 2,
         "importPath": "src.other_modules.asterisks",
@@ -181,6 +449,24 @@
         "description": "src.other_modules.asterisks",
         "peekOfCode": "def other_asterisks(number: int) -> str:\n    result = \"\"\n    for n in range(number):\n        for _ in range(number):\n            result += \"*\"\n        if n < number - 1:\n            result += \"\\n\"\n    return result",
         "detail": "src.other_modules.asterisks",
+        "documentation": {}
+    },
+    {
+        "label": "read_json_file",
+        "kind": 2,
+        "importPath": "src.analyzer",
+        "description": "src.analyzer",
+        "peekOfCode": "def read_json_file(file_path):\n    with open(file_path, \"r\") as file:\n        return json.load(file)\ndef analyze_json_file(file_path) -> str:\n    if not file_path.endswith(\".json\"):\n        raise ValueError(\"O arquivo precise ser um aquivo JSON\")\n    data = read_json_file(file_path)\n    return f\"A pessoa do nome: {data['nome']} \" f\"tem {data['idade']} anos de idade.\"",
+        "detail": "src.analyzer",
+        "documentation": {}
+    },
+    {
+        "label": "analyze_json_file",
+        "kind": 2,
+        "importPath": "src.analyzer",
+        "description": "src.analyzer",
+        "peekOfCode": "def analyze_json_file(file_path) -> str:\n    if not file_path.endswith(\".json\"):\n        raise ValueError(\"O arquivo precise ser um aquivo JSON\")\n    data = read_json_file(file_path)\n    return f\"A pessoa do nome: {data['nome']} \" f\"tem {data['idade']} anos de idade.\"",
+        "detail": "src.analyzer",
         "documentation": {}
     },
     {
@@ -274,66 +560,183 @@
         "documentation": {}
     },
     {
+        "label": "test_sum_elements",
+        "kind": 2,
+        "importPath": "tests.Decorators.another_test",
+        "description": "tests.Decorators.another_test",
+        "peekOfCode": "def test_sum_elements(my_list):\n    assert [num * 3 for num in my_list] == [3, 6, 9]",
+        "detail": "tests.Decorators.another_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_print_to_stdout",
+        "kind": 2,
+        "importPath": "tests.Decorators.fixtures_test",
+        "description": "tests.Decorators.fixtures_test",
+        "peekOfCode": "def test_print_to_stdout(capsys):\n    print(\"Hello World!\")\n    captured = capsys.readouterr()\n    assert captured.out == \"Hello World!\\n\"\ndef test_error_to_stderr(capsys):\n    import sys\n    sys.stderr.write(\"Error message\\n\")\n    captured = capsys.readouterr()\n    assert captured.err == \"Error message\\n\"\ndef test_show_your_digit(monkeypatch):",
+        "detail": "tests.Decorators.fixtures_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_error_to_stderr",
+        "kind": 2,
+        "importPath": "tests.Decorators.fixtures_test",
+        "description": "tests.Decorators.fixtures_test",
+        "peekOfCode": "def test_error_to_stderr(capsys):\n    import sys\n    sys.stderr.write(\"Error message\\n\")\n    captured = capsys.readouterr()\n    assert captured.err == \"Error message\\n\"\ndef test_show_your_digit(monkeypatch):\n    def mock_input(_):\n        return \"Python\"\n    monkeypatch.setattr(\"builtins.input\", mock_input)\n    output = show_your_input()",
+        "detail": "tests.Decorators.fixtures_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_show_your_digit",
+        "kind": 2,
+        "importPath": "tests.Decorators.fixtures_test",
+        "description": "tests.Decorators.fixtures_test",
+        "peekOfCode": "def test_show_your_digit(monkeypatch):\n    def mock_input(_):\n        return \"Python\"\n    monkeypatch.setattr(\"builtins.input\", mock_input)\n    output = show_your_input()\n    assert output == \"Você digitou: Python!\"",
+        "detail": "tests.Decorators.fixtures_test",
+        "documentation": {}
+    },
+    {
+        "label": "sum_two_numbers",
+        "kind": 2,
+        "importPath": "tests.Doctests.doctests",
+        "description": "tests.Doctests.doctests",
+        "peekOfCode": "def sum_two_numbers(a, b):\n    \"\"\"Retorna a soma de dois números recebidos por parâmetro\n    Exemplos\n    --------\n    >>> sum_two_numbers(0,0)\n    0\n    >>> sum_two_numbers(2, 2)\n    4\n    \"\"\"\n    return a + b",
+        "detail": "tests.Doctests.doctests",
+        "documentation": {}
+    },
+    {
+        "label": "mean",
+        "kind": 2,
+        "importPath": "tests.Doctests.doctests",
+        "description": "tests.Doctests.doctests",
+        "peekOfCode": "def mean(numbers: List[int]) -> float:\n    \"\"\"\n    Calcula a média de uma lista de números.\n    >>> my_list = [1, 2, 3, 4, 5]\n    >>> mean(my_list)\n    3.0\n    >>> mean([2.5, 3.75, 1.25, 4])\n    2.875\n    >>> mean([])\n    Divisão por zero.",
+        "detail": "tests.Doctests.doctests",
+        "documentation": {}
+    },
+    {
+        "label": "sum_list",
+        "kind": 2,
+        "importPath": "tests.Doctests.doctests",
+        "description": "tests.Doctests.doctests",
+        "peekOfCode": "def sum_list(list: List[int]) -> int:\n    \"\"\"\n    Retorna a soma dos inteiros de uma lista\n    >>> sum_list([1,2,3,4,5])\n    15\n    >>> sum_list([45, 45, 10, 50])\n    150\n    \"\"\"\n    total = 0\n    for n in list:",
+        "detail": "tests.Doctests.doctests",
+        "documentation": {}
+    },
+    {
+        "label": "mean",
+        "kind": 2,
+        "importPath": "tests.Doctests.main",
+        "description": "tests.Doctests.main",
+        "peekOfCode": "def mean(numbers):\n    \"\"\"\n    Calcula a média de uma lista de números.\n    >>> my_list = [1, 2, 3, 4, 5]\n    >>> mean(my_list)\n    3.0\n    >>> mean([2.5, 3.75, 1.25, 4])\n    2.875\n    >>> mean([])\n    Traceback (most recent call last):",
+        "detail": "tests.Doctests.main",
+        "documentation": {}
+    },
+    {
         "label": "test_sum_numbers",
         "kind": 2,
-        "importPath": "tests.a_test",
-        "description": "tests.a_test",
-        "peekOfCode": "def test_sum_numbers(my_list):\n    assert sum(my_list) == 6\ndef test_fib3():\n    result = fib3(8)\n    assert result == [0, 1, 1, 2, 3, 5]\n@pytest.mark.skip(reason=\"Somente para teste\")\ndef test_fib2():\n    result = fib2(10)\n    assert result == 55\n@pytest.mark.skipif(sys.platform == \"windows\", reason=\"Não suportado no windowns\")",
-        "detail": "tests.a_test",
+        "importPath": "tests.Markers.a_test",
+        "description": "tests.Markers.a_test",
+        "peekOfCode": "def test_sum_numbers(my_list):\n    assert sum(my_list) == 6\ndef test_fib3():\n    result = fib3(8)\n    assert result == [0, 1, 1, 2, 3, 5]\n@pytest.mark.skip(reason=\"Somente para teste.\")\ndef test_fib2():\n    result = fib2(10)\n    assert result == 55\n@pytest.mark.skipif(sys.platform == \"linux\", reason=\"Apenas para testes. \")",
+        "detail": "tests.Markers.a_test",
         "documentation": {}
     },
     {
         "label": "test_fib3",
         "kind": 2,
-        "importPath": "tests.a_test",
-        "description": "tests.a_test",
-        "peekOfCode": "def test_fib3():\n    result = fib3(8)\n    assert result == [0, 1, 1, 2, 3, 5]\n@pytest.mark.skip(reason=\"Somente para teste\")\ndef test_fib2():\n    result = fib2(10)\n    assert result == 55\n@pytest.mark.skipif(sys.platform == \"windows\", reason=\"Não suportado no windowns\")\ndef test_asterisks(high_list):\n    result = asterisks(high_list)",
-        "detail": "tests.a_test",
+        "importPath": "tests.Markers.a_test",
+        "description": "tests.Markers.a_test",
+        "peekOfCode": "def test_fib3():\n    result = fib3(8)\n    assert result == [0, 1, 1, 2, 3, 5]\n@pytest.mark.skip(reason=\"Somente para teste.\")\ndef test_fib2():\n    result = fib2(10)\n    assert result == 55\n@pytest.mark.skipif(sys.platform == \"linux\", reason=\"Apenas para testes. \")\ndef test_asterisks(high_list):\n    result = asterisks(high_list)",
+        "detail": "tests.Markers.a_test",
         "documentation": {}
     },
     {
         "label": "test_fib2",
         "kind": 2,
-        "importPath": "tests.a_test",
-        "description": "tests.a_test",
-        "peekOfCode": "def test_fib2():\n    result = fib2(10)\n    assert result == 55\n@pytest.mark.skipif(sys.platform == \"windows\", reason=\"Não suportado no windowns\")\ndef test_asterisks(high_list):\n    result = asterisks(high_list)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"\ndef test_other_asteriks():\n    result = other_asterisks(5)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"",
-        "detail": "tests.a_test",
+        "importPath": "tests.Markers.a_test",
+        "description": "tests.Markers.a_test",
+        "peekOfCode": "def test_fib2():\n    result = fib2(10)\n    assert result == 55\n@pytest.mark.skipif(sys.platform == \"linux\", reason=\"Apenas para testes. \")\ndef test_asterisks(high_list):\n    result = asterisks(high_list)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"\ndef test_other_asteriks():\n    result = other_asterisks(5)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"",
+        "detail": "tests.Markers.a_test",
         "documentation": {}
     },
     {
         "label": "test_asterisks",
         "kind": 2,
-        "importPath": "tests.a_test",
-        "description": "tests.a_test",
+        "importPath": "tests.Markers.a_test",
+        "description": "tests.Markers.a_test",
         "peekOfCode": "def test_asterisks(high_list):\n    result = asterisks(high_list)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"\ndef test_other_asteriks():\n    result = other_asterisks(5)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"\ndef test_generate_output(tmp_path):\n    content = {\"a\": 1}\n    output_path = tmp_path / \"tes_path_lib.json\"\n    generate_output(content, output_path)",
-        "detail": "tests.a_test",
+        "detail": "tests.Markers.a_test",
         "documentation": {}
     },
     {
         "label": "test_other_asteriks",
         "kind": 2,
-        "importPath": "tests.a_test",
-        "description": "tests.a_test",
+        "importPath": "tests.Markers.a_test",
+        "description": "tests.Markers.a_test",
         "peekOfCode": "def test_other_asteriks():\n    result = other_asterisks(5)\n    assert result == \"*****\\n*****\\n*****\\n*****\\n*****\"\ndef test_generate_output(tmp_path):\n    content = {\"a\": 1}\n    output_path = tmp_path / \"tes_path_lib.json\"\n    generate_output(content, output_path)\n    assert os.path.isfile(output_path)\n    with open(output_path, \"r\") as file:\n        assert file.read() == '{\"a\": 1}'",
-        "detail": "tests.a_test",
+        "detail": "tests.Markers.a_test",
         "documentation": {}
     },
     {
         "label": "test_generate_output",
         "kind": 2,
-        "importPath": "tests.a_test",
-        "description": "tests.a_test",
+        "importPath": "tests.Markers.a_test",
+        "description": "tests.Markers.a_test",
         "peekOfCode": "def test_generate_output(tmp_path):\n    content = {\"a\": 1}\n    output_path = tmp_path / \"tes_path_lib.json\"\n    generate_output(content, output_path)\n    assert os.path.isfile(output_path)\n    with open(output_path, \"r\") as file:\n        assert file.read() == '{\"a\": 1}'",
-        "detail": "tests.a_test",
+        "detail": "tests.Markers.a_test",
         "documentation": {}
     },
     {
-        "label": "test_sum_elements",
+        "label": "test_slow_mark",
         "kind": 2,
-        "importPath": "tests.another_test",
-        "description": "tests.another_test",
-        "peekOfCode": "def test_sum_elements(my_list):\n    assert [num * 3 for num in my_list] == [3, 6, 9]",
-        "detail": "tests.another_test",
+        "importPath": "tests.Markers.markers_test",
+        "description": "tests.Markers.markers_test",
+        "peekOfCode": "def test_slow_mark():\n    time.sleep(4)",
+        "detail": "tests.Markers.markers_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_mean",
+        "kind": 2,
+        "importPath": "tests.Markers.parametrized_test",
+        "description": "tests.Markers.parametrized_test",
+        "peekOfCode": "def test_mean(input_numbers, expected_result):\n    assert mean(input_numbers) == expected_result\ndef test_mean_fail():\n    with pytest.raises(ZeroDivisionError):\n        mean([])",
+        "detail": "tests.Markers.parametrized_test",
+        "documentation": {}
+    },
+    {
+        "label": "test_mean_fail",
+        "kind": 2,
+        "importPath": "tests.Markers.parametrized_test",
+        "description": "tests.Markers.parametrized_test",
+        "peekOfCode": "def test_mean_fail():\n    with pytest.raises(ZeroDivisionError):\n        mean([])",
+        "detail": "tests.Markers.parametrized_test",
+        "documentation": {}
+    },
+    {
+        "label": "read_json_file",
+        "kind": 2,
+        "importPath": "tests.Mock_unittest.analyzer",
+        "description": "tests.Mock_unittest.analyzer",
+        "peekOfCode": "def read_json_file(file_path):\n    with open(file_path, \"r\") as file:\n        return json.load(file)\ndef analyze_json_file(file_path) -> str:\n    if not file_path.endswith(\".json\"):\n        raise ValueError(\"O arquivo precise ser um aquivo JSON\")\n    data = read_json_file(file_path)\n    return f\"A pessoa do nome: {data['nome']} \" f\"tem {data['idade']} anos de idade.\"",
+        "detail": "tests.Mock_unittest.analyzer",
+        "documentation": {}
+    },
+    {
+        "label": "analyze_json_file",
+        "kind": 2,
+        "importPath": "tests.Mock_unittest.analyzer",
+        "description": "tests.Mock_unittest.analyzer",
+        "peekOfCode": "def analyze_json_file(file_path) -> str:\n    if not file_path.endswith(\".json\"):\n        raise ValueError(\"O arquivo precise ser um aquivo JSON\")\n    data = read_json_file(file_path)\n    return f\"A pessoa do nome: {data['nome']} \" f\"tem {data['idade']} anos de idade.\"",
+        "detail": "tests.Mock_unittest.analyzer",
+        "documentation": {}
+    },
+    {
+        "label": "test_analyze_json_file",
+        "kind": 2,
+        "importPath": "tests.Mock_unittest.test_analyzer",
+        "description": "tests.Mock_unittest.test_analyzer",
+        "peekOfCode": "def test_analyze_json_file():\n    # Passo 2\n    mock_read_json_file = Mock(return_value={\"nome\": \"Maria\", \"idade\": 31})\n    fake_file_path = \"invalid.json\"\n    # Passo 3\n    with patch(\"analyzer.read_json_file\", mock_read_json_file):\n        result = analyze_json_file(fake_file_path)\n    assert result == \"A pessoa de nome Maria tem 31 anos de idade.\"",
+        "detail": "tests.Mock_unittest.test_analyzer",
         "documentation": {}
     },
     {
@@ -361,78 +764,6 @@
         "description": "tests.conftest",
         "peekOfCode": "def pytest_configure(config):\n    config.addinivalue_line(\"markers\", \"slow: mark test as slow\")",
         "detail": "tests.conftest",
-        "documentation": {}
-    },
-    {
-        "label": "sum_two_numbers",
-        "kind": 2,
-        "importPath": "tests.doctests",
-        "description": "tests.doctests",
-        "peekOfCode": "def sum_two_numbers(a, b):\n    \"\"\"Retorna a soma de dois números recebidos por parâmetro\n    Exemplos\n    --------\n    >>> sum_two_numbers(0,0)\n    0\n    >>> sum_two_numbers(2, 2)\n    4\n    \"\"\"\n    return a + b",
-        "detail": "tests.doctests",
-        "documentation": {}
-    },
-    {
-        "label": "mean",
-        "kind": 2,
-        "importPath": "tests.doctests",
-        "description": "tests.doctests",
-        "peekOfCode": "def mean(numbers: List[int]) -> float:\n    \"\"\"\n    Calcula a média de uma lista de números.\n    >>> my_list = [1, 2, 3, 4, 5]\n    >>> mean(my_list)\n    3.0\n    >>> mean([2.5, 3.75, 1.25, 4])\n    2.875\n    >>> mean([])\n    Divisão por zero.",
-        "detail": "tests.doctests",
-        "documentation": {}
-    },
-    {
-        "label": "sum_list",
-        "kind": 2,
-        "importPath": "tests.doctests",
-        "description": "tests.doctests",
-        "peekOfCode": "def sum_list(list: List[int]) -> int:\n    \"\"\"\n    Retorna a soma dos inteiros de uma lista\n    >>> sum_list([1,2,3,4,5])\n    15\n    >>> sum_list([45, 45, 10, 50])\n    150\n    \"\"\"\n    total = 0\n    for n in list:",
-        "detail": "tests.doctests",
-        "documentation": {}
-    },
-    {
-        "label": "test_print_to_stdout",
-        "kind": 2,
-        "importPath": "tests.fixtures_test",
-        "description": "tests.fixtures_test",
-        "peekOfCode": "def test_print_to_stdout(capsys):\n    print(\"Hello World!\")\n    captured = capsys.readouterr()\n    assert captured.out == \"Hello World!\\n\"\ndef test_error_to_stderr(capsys):\n    import sys\n    sys.stderr.write(\"Error message\\n\")\n    captured = capsys.readouterr()\n    assert captured.err == \"Error message\\n\"\ndef test_show_your_digit(monkeypatch):",
-        "detail": "tests.fixtures_test",
-        "documentation": {}
-    },
-    {
-        "label": "test_error_to_stderr",
-        "kind": 2,
-        "importPath": "tests.fixtures_test",
-        "description": "tests.fixtures_test",
-        "peekOfCode": "def test_error_to_stderr(capsys):\n    import sys\n    sys.stderr.write(\"Error message\\n\")\n    captured = capsys.readouterr()\n    assert captured.err == \"Error message\\n\"\ndef test_show_your_digit(monkeypatch):\n    def mock_input(_):\n        return \"Python\"\n    monkeypatch.setattr(\"builtins.input\", mock_input)\n    output = show_your_input()",
-        "detail": "tests.fixtures_test",
-        "documentation": {}
-    },
-    {
-        "label": "test_show_your_digit",
-        "kind": 2,
-        "importPath": "tests.fixtures_test",
-        "description": "tests.fixtures_test",
-        "peekOfCode": "def test_show_your_digit(monkeypatch):\n    def mock_input(_):\n        return \"Python\"\n    monkeypatch.setattr(\"builtins.input\", mock_input)\n    output = show_your_input()\n    assert output == \"Você digitou: Python!\"",
-        "detail": "tests.fixtures_test",
-        "documentation": {}
-    },
-    {
-        "label": "mean",
-        "kind": 2,
-        "importPath": "tests.main",
-        "description": "tests.main",
-        "peekOfCode": "def mean(numbers):\n    \"\"\"\n    Calcula a média de uma lista de números.\n    >>> my_list = [1, 2, 3, 4, 5]\n    >>> mean(my_list)\n    3.0\n    >>> mean([2.5, 3.75, 1.25, 4])\n    2.875\n    >>> mean([])\n    Traceback (most recent call last):",
-        "detail": "tests.main",
-        "documentation": {}
-    },
-    {
-        "label": "test_slow_mark",
-        "kind": 2,
-        "importPath": "tests.markers_test",
-        "description": "tests.markers_test",
-        "peekOfCode": "def test_slow_mark():\n    time.sleep(4)",
-        "detail": "tests.markers_test",
         "documentation": {}
     },
     {
