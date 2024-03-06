@@ -1,4 +1,4 @@
-from ...src.analyzer import analyze_json_file
+from ...src.analyzer import analyze_json_file, read_json_file
 from unittest.mock import patch
 
 
@@ -9,16 +9,13 @@ def test_analyze_json_file():
             '{"nome": "Maria", "idade": 31}'
         )
 
-        result = analyze_json_file("invalid.json")
+        first_result = analyze_json_file("invalid.json")
+        assert first_result == "A pessoa do nome: Maria tem 31 anos de idade."
 
-        assert result == "A pessoa do nome: Maria tem 31 anos de idade."
+    with patch("builtins.open") as mock_open:
+        mock_open.return_value.__enter__.return_value.read.return_value = (
+            '{"nome": "Agenor", "idade": 86}'
+        )
 
-
-# def test_second_analyzer_json_file():
-#     mock_read_json_file = Mock(return_value={"nome": "Maria", "idade": 31})
-#     invalid_json = "invalid.json"
-
-#     with patch("analyzer.read_json_file", mock_read_json_file):
-#         result = analyze_json_file(invalid_json)
-#         assert result == "A pessoa do nome: Maria tem 31 anos de idade."
-#   mock_read_json_file.assert_called_with(fake_file_path)
+        second_result = analyze_json_file("invalid.json")
+        assert second_result == "A pessoa do nome: Agenor tem 86 anos de idade."
