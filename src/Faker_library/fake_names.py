@@ -4,7 +4,7 @@ from data_values import dates
 
 fake = Faker()
 
-fake = Faker(locale="pt-BR")
+fake = Faker(locale="es-AR")
 
 
 class MyProvider(BaseProvider):
@@ -12,21 +12,16 @@ class MyProvider(BaseProvider):
         for key in dates.keys():
             if fake.locales[0].replace("_", "-") == key:
                 if "half_part" in dates[key]:
-                    first_element = self.random_element(
-                        dates[key]["first_part"]
-                    )
-                    half_element = self.random_number(4)
-                    second_element = self.random_element(
-                        dates[key]["second_part"]
-                    )
+
+                    first_element = dates[key]["first_part"]
+                    half_element = dates[key]["half_part"]
+                    second_element = dates[key]["second_part"]
+
                     return f"{first_element} {half_element} {second_element}"
                 else:
-                    first_element = self.random_element(
-                        dates[key]["first_part"]
-                    )
-                    second_element = self.random_element(
-                        dates[key]["second_part"]
-                    )
+                    first_element = dates[key]["first_part"]
+                    second_element = dates[key]["second_part"]
+
                     return f"{first_element}-{second_element}"
 
 
