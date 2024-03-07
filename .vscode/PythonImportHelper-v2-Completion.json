@@ -106,6 +106,30 @@
         "documentation": {}
     },
     {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "BaseProvider",
+        "importPath": "faker.providers",
+        "description": "faker.providers",
+        "isExtraImport": true,
+        "detail": "faker.providers",
+        "documentation": {}
+    },
+    {
+        "label": "dates",
+        "importPath": "data_values",
+        "description": "data_values",
+        "isExtraImport": true,
+        "detail": "data_values",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -193,22 +217,6 @@
         "importPath": "csv",
         "description": "csv",
         "detail": "csv",
-        "documentation": {}
-    },
-    {
-        "label": "Faker",
-        "importPath": "faker",
-        "description": "faker",
-        "isExtraImport": true,
-        "detail": "faker",
-        "documentation": {}
-    },
-    {
-        "label": "BaseProvider",
-        "importPath": "faker.providers",
-        "description": "faker.providers",
-        "isExtraImport": true,
-        "detail": "faker.providers",
         "documentation": {}
     },
     {
@@ -442,6 +450,42 @@
         "documentation": {}
     },
     {
+        "label": "dates",
+        "kind": 5,
+        "importPath": "src.Faker_library.data_values",
+        "description": "src.Faker_library.data_values",
+        "peekOfCode": "dates = {\n    \"pt-BR\": {\n        \"first_part\": [\"AYT\", \"SAW\", \"NYG\", \"PKI\"],\n        \"second_part\": [\"7Y45\", \"2L54\", \"0N26\", \"1U20\"],\n    },\n    \"es-AR\": {\n        \"first_part\": [\"AA\", \"AB\", \"AC\", \"AD\", \"AE\"],\n        \"half_part\": \"\",\n        \"second_part\": [\"ES\", \"RS\", \"LS\"],\n    },",
+        "detail": "src.Faker_library.data_values",
+        "documentation": {}
+    },
+    {
+        "label": "MyProvider",
+        "kind": 6,
+        "importPath": "src.Faker_library.fake_names",
+        "description": "src.Faker_library.fake_names",
+        "peekOfCode": "class MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates[key]:\n                    first_element = self.random_element(\n                        dates[key][\"first_part\"]\n                    )\n                    half_element = self.random_number(4)\n                    second_element = self.random_element(",
+        "detail": "src.Faker_library.fake_names",
+        "documentation": {}
+    },
+    {
+        "label": "fake",
+        "kind": 5,
+        "importPath": "src.Faker_library.fake_names",
+        "description": "src.Faker_library.fake_names",
+        "peekOfCode": "fake = Faker()\nfake = Faker(locale=\"pt-BR\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates[key]:\n                    first_element = self.random_element(\n                        dates[key][\"first_part\"]\n                    )",
+        "detail": "src.Faker_library.fake_names",
+        "documentation": {}
+    },
+    {
+        "label": "fake",
+        "kind": 5,
+        "importPath": "src.Faker_library.fake_names",
+        "description": "src.Faker_library.fake_names",
+        "peekOfCode": "fake = Faker(locale=\"pt-BR\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates[key]:\n                    first_element = self.random_element(\n                        dates[key][\"first_part\"]\n                    )\n                    half_element = self.random_number(4)",
+        "detail": "src.Faker_library.fake_names",
+        "documentation": {}
+    },
+    {
         "label": "asterisks",
         "kind": 2,
         "importPath": "src.other_modules.asterisks",
@@ -502,33 +546,6 @@
         "description": "src.csv_for_tuple_list",
         "peekOfCode": "def prime_numbers(numbers: List[int]) -> Dict[str, str]:\n    result = {}\n    for num in numbers:\n        if num <= 1:\n            result[f\"{num}\"] = \"Não é primo\"\n        else:\n            count = 0\n            for tn in range(2, int(num**0.5) + 1):\n                if num % tn == 0:\n                    count += 1",
         "detail": "src.csv_for_tuple_list",
-        "documentation": {}
-    },
-    {
-        "label": "MyProvider",
-        "kind": 6,
-        "importPath": "src.fake_names",
-        "description": "src.fake_names",
-        "peekOfCode": "class MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        if fake.locales[0].replace(\"_\", \"-\") == \"es-AR\":\n            ar_first_elements = self.random_element(\n                [\"AA\", \"AB\", \"AC\", \"AD\", \"AE\"]\n            )\n            ar_second_elements = self.random_number(4)\n            ar_thirth_elements = self.random_element([\"ES\", \"RS\", \"LS\"])\n            plate = f\"\"\"\n{ar_first_elements} {ar_second_elements} {ar_thirth_elements}",
-        "detail": "src.fake_names",
-        "documentation": {}
-    },
-    {
-        "label": "fake",
-        "kind": 5,
-        "importPath": "src.fake_names",
-        "description": "src.fake_names",
-        "peekOfCode": "fake = Faker()\nfake = Faker(locale=\"es-AR\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        if fake.locales[0].replace(\"_\", \"-\") == \"es-AR\":\n            ar_first_elements = self.random_element(\n                [\"AA\", \"AB\", \"AC\", \"AD\", \"AE\"]\n            )\n            ar_second_elements = self.random_number(4)\n            ar_thirth_elements = self.random_element([\"ES\", \"RS\", \"LS\"])",
-        "detail": "src.fake_names",
-        "documentation": {}
-    },
-    {
-        "label": "fake",
-        "kind": 5,
-        "importPath": "src.fake_names",
-        "description": "src.fake_names",
-        "peekOfCode": "fake = Faker(locale=\"es-AR\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        if fake.locales[0].replace(\"_\", \"-\") == \"es-AR\":\n            ar_first_elements = self.random_element(\n                [\"AA\", \"AB\", \"AC\", \"AD\", \"AE\"]\n            )\n            ar_second_elements = self.random_number(4)\n            ar_thirth_elements = self.random_element([\"ES\", \"RS\", \"LS\"])\n            plate = f\"\"\"",
-        "detail": "src.fake_names",
         "documentation": {}
     },
     {
