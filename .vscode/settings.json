@@ -4,5 +4,9 @@
     "the_bug_hunting"
   ],
   "python.testing.unittestEnabled": false,
-  "python.testing.pytestEnabled": true
+  "python.testing.pytestEnabled": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.maxColumn": 79,
+  "editor.minimap.renderCharacters": false,
+  "diffEditor.maxFileSize": 100
 }

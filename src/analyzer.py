@@ -11,4 +11,7 @@ def analyze_json_file(file_path) -> str:
         raise ValueError("O arquivo precise ser um aquivo JSON")
 
     data = read_json_file(file_path)
-    return f"A pessoa do nome: {data['nome']} " f"tem {data['idade']} anos de idade."
+    return (
+        f"A pessoa do nome: {data['nome']} "
+        f"tem {data['idade']} anos de idade."
+    )

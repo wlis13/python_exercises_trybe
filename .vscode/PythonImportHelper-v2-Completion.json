@@ -82,14 +82,6 @@
         "documentation": {}
     },
     {
-        "label": "Mock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
         "label": "patch",
         "importPath": "unittest.mock",
         "description": "unittest.mock",
@@ -456,7 +448,7 @@
         "kind": 2,
         "importPath": "src.analyzer",
         "description": "src.analyzer",
-        "peekOfCode": "def read_json_file(file_path):\n    with open(file_path, \"r\") as file:\n        return json.load(file)\ndef analyze_json_file(file_path) -> str:\n    if not file_path.endswith(\".json\"):\n        raise ValueError(\"O arquivo precise ser um aquivo JSON\")\n    data = read_json_file(file_path)\n    return f\"A pessoa do nome: {data['nome']} \" f\"tem {data['idade']} anos de idade.\"",
+        "peekOfCode": "def read_json_file(file_path):\n    with open(file_path, \"r\") as file:\n        return json.load(file)\ndef analyze_json_file(file_path) -> str:\n    if not file_path.endswith(\".json\"):\n        raise ValueError(\"O arquivo precise ser um aquivo JSON\")\n    data = read_json_file(file_path)\n    return (\n        f\"A pessoa do nome: {data['nome']} \"\n        f\"tem {data['idade']} anos de idade.\"",
         "detail": "src.analyzer",
         "documentation": {}
     },
@@ -465,7 +457,7 @@
         "kind": 2,
         "importPath": "src.analyzer",
         "description": "src.analyzer",
-        "peekOfCode": "def analyze_json_file(file_path) -> str:\n    if not file_path.endswith(\".json\"):\n        raise ValueError(\"O arquivo precise ser um aquivo JSON\")\n    data = read_json_file(file_path)\n    return f\"A pessoa do nome: {data['nome']} \" f\"tem {data['idade']} anos de idade.\"",
+        "peekOfCode": "def analyze_json_file(file_path) -> str:\n    if not file_path.endswith(\".json\"):\n        raise ValueError(\"O arquivo precise ser um aquivo JSON\")\n    data = read_json_file(file_path)\n    return (\n        f\"A pessoa do nome: {data['nome']} \"\n        f\"tem {data['idade']} anos de idade.\"\n    )",
         "detail": "src.analyzer",
         "documentation": {}
     },
@@ -713,21 +705,30 @@
         "documentation": {}
     },
     {
-        "label": "read_json_file",
-        "kind": 2,
-        "importPath": "tests.Mock_unittest.analyzer",
-        "description": "tests.Mock_unittest.analyzer",
-        "peekOfCode": "def read_json_file(file_path):\n    with open(file_path, \"r\") as file:\n        return json.load(file)\ndef analyze_json_file(file_path) -> str:\n    if not file_path.endswith(\".json\"):\n        raise ValueError(\"O arquivo precise ser um aquivo JSON\")\n    data = read_json_file(file_path)\n    return f\"A pessoa do nome: {data['nome']} \" f\"tem {data['idade']} anos de idade.\"",
-        "detail": "tests.Mock_unittest.analyzer",
+        "label": "alberto_mock_file_json",
+        "kind": 5,
+        "importPath": "tests.Mock_unittest.mock_json",
+        "description": "tests.Mock_unittest.mock_json",
+        "peekOfCode": "alberto_mock_file_json = \"\"\"\n{\n  \"nome\": \"Alberto\",\n  \"idade\": 56,\n  \"ano_de_nascimento\": 1987,\n  \"peso\": 78,\n  \"informações_de_trabalho\": {\n    \"local\": \"Belo Horizonte n° 478-Centro\",\n    \"horario_entrada\": {\n      \"numero\": 7,",
+        "detail": "tests.Mock_unittest.mock_json",
         "documentation": {}
     },
     {
-        "label": "analyze_json_file",
-        "kind": 2,
-        "importPath": "tests.Mock_unittest.analyzer",
-        "description": "tests.Mock_unittest.analyzer",
-        "peekOfCode": "def analyze_json_file(file_path) -> str:\n    if not file_path.endswith(\".json\"):\n        raise ValueError(\"O arquivo precise ser um aquivo JSON\")\n    data = read_json_file(file_path)\n    return f\"A pessoa do nome: {data['nome']} \" f\"tem {data['idade']} anos de idade.\"",
-        "detail": "tests.Mock_unittest.analyzer",
+        "label": "maria_mock_file_json",
+        "kind": 5,
+        "importPath": "tests.Mock_unittest.mock_json",
+        "description": "tests.Mock_unittest.mock_json",
+        "peekOfCode": "maria_mock_file_json = \"\"\"\n  {\n    \"nome\": \"Maria\",\n    \"idade\": 30\n  }\n\"\"\"\nagenor_mock_file_json = \"\"\"\n  {\n    \"nome\": \"Agenor\",\n    \"idade\": 86",
+        "detail": "tests.Mock_unittest.mock_json",
+        "documentation": {}
+    },
+    {
+        "label": "agenor_mock_file_json",
+        "kind": 5,
+        "importPath": "tests.Mock_unittest.mock_json",
+        "description": "tests.Mock_unittest.mock_json",
+        "peekOfCode": "agenor_mock_file_json = \"\"\"\n  {\n    \"nome\": \"Agenor\",\n    \"idade\": 86\n  }\n\"\"\"",
+        "detail": "tests.Mock_unittest.mock_json",
         "documentation": {}
     },
     {
@@ -735,7 +736,25 @@
         "kind": 2,
         "importPath": "tests.Mock_unittest.test_analyzer",
         "description": "tests.Mock_unittest.test_analyzer",
-        "peekOfCode": "def test_analyze_json_file():\n    # Passo 2\n    mock_read_json_file = Mock(return_value={\"nome\": \"Maria\", \"idade\": 31})\n    fake_file_path = \"invalid.json\"\n    # Passo 3\n    with patch(\"analyzer.read_json_file\", mock_read_json_file):\n        result = analyze_json_file(fake_file_path)\n    assert result == \"A pessoa de nome Maria tem 31 anos de idade.\"",
+        "peekOfCode": "def test_analyze_json_file():\n    with patch(\"builtins.open\") as mock_file:\n        mock_file.return_value.__enter__.return_value.read.return_value = (\n            maria_mock_file_json\n        )\n        assert (\n            analyze_json_file(\"invalid.json\")\n            == \"A pessoa do nome: Maria tem 30 anos de idade.\"\n        )\n    with patch(\"builtins.open\") as mock_file:",
+        "detail": "tests.Mock_unittest.test_analyzer",
+        "documentation": {}
+    },
+    {
+        "label": "test_analyzer_json_file_propagates_exception",
+        "kind": 2,
+        "importPath": "tests.Mock_unittest.test_analyzer",
+        "description": "tests.Mock_unittest.test_analyzer",
+        "peekOfCode": "def test_analyzer_json_file_propagates_exception():\n    with pytest.raises(FileNotFoundError):\n        assert analyze_json_file(\"invalid.json\")\n    with patch(\"builtins.open\") as mock_file:\n        mock_file.return_value.__enter__.return_value.read.return_value = (\n            agenor_mock_file_json\n        )\n        with pytest.raises(ValueError):\n            assert analyze_json_file(\"invalid.txt\")\ndef test_read_json_file():",
+        "detail": "tests.Mock_unittest.test_analyzer",
+        "documentation": {}
+    },
+    {
+        "label": "test_read_json_file",
+        "kind": 2,
+        "importPath": "tests.Mock_unittest.test_analyzer",
+        "description": "tests.Mock_unittest.test_analyzer",
+        "peekOfCode": "def test_read_json_file():\n    with patch(\"builtins.open\") as mock_file:\n        mock_file.return_value.__enter__.return_value.read.return_value = (\n            '{\"nome\": \"Maria\", \"idade\": 31}'\n        )\n        result = read_json_file(\"invalid.json\")\n        assert result == {\"nome\": \"Maria\", \"idade\": 31}\n        mock_file.assert_called_with(\"invalid.json\", \"r\")",
         "detail": "tests.Mock_unittest.test_analyzer",
         "documentation": {}
     },

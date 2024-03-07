@@ -1,6 +1,6 @@
-import pytest
 from ..Doctests.main import mean
 import sys
+import pytest
 
 
 @pytest.mark.parametrize(
@@ -11,7 +11,9 @@ import sys
             [2.5, 3.75, 1.25, 4],
             2.875,
             marks=pytest.mark.skipif(
-                sys.platform == "linux", reason="teste com marcador condicional"
+                sys.platform == "linux",
+                reason="""
+                teste com marcador condicional""",
             ),
             id="test_with_mark",
         ),
