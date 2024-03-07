@@ -139,7 +139,7 @@
         "documentation": {}
     },
     {
-        "label": "dates",
+        "label": "dates_locales",
         "importPath": "data_values",
         "description": "data_values",
         "isExtraImport": true,
@@ -459,11 +459,11 @@
         "documentation": {}
     },
     {
-        "label": "dates",
+        "label": "dates_locales",
         "kind": 5,
         "importPath": "src.Faker_library.data_values",
         "description": "src.Faker_library.data_values",
-        "peekOfCode": "dates = {\n    \"pt-BR\": {\n        \"first_part\": random.choice([\"AYT\", \"SAW\", \"NYG\", \"PKI\"]),\n        \"second_part\": random.choice([\"7Y45\", \"2L54\", \"0N26\", \"1U20\"]),\n    },\n    \"es-AR\": {\n        \"first_part\": random.choice([\"AA\", \"AB\", \"AC\", \"AD\", \"AE\"]),\n        \"half_part\": random.randint(1000, 9999),\n        \"second_part\": random.choice([\"ES\", \"RS\", \"LS\"]),\n    },",
+        "peekOfCode": "dates_locales = {\n    \"pt-BR\": {\n        \"first_part\": random.choice([\"BRA\", \"SAW\", \"NYG\", \"PKI\"]),\n        \"second_part\": random.choice([\"7Y45\", \"2L54\", \"0N26\", \"1U20\"]),\n    },\n    \"es-AR\": {\n        \"first_part\": random.choice([\"AR\", \"AB\", \"AC\", \"AD\", \"AE\"]),\n        \"half_part\": random.randint(1000, 9999),\n        \"second_part\": random.choice([\"ES\", \"RS\", \"LS\"]),\n    },",
         "detail": "src.Faker_library.data_values",
         "documentation": {}
     },
@@ -472,7 +472,7 @@
         "kind": 6,
         "importPath": "src.Faker_library.fake_names",
         "description": "src.Faker_library.fake_names",
-        "peekOfCode": "class MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates[key]:\n                    first_element = dates[key][\"first_part\"]\n                    half_element = dates[key][\"half_part\"]\n                    second_element = dates[key][\"second_part\"]\n                    return f\"{first_element} {half_element} {second_element}\"\n                else:",
+        "peekOfCode": "class MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates_locales.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates_locales[key]:\n                    first_element = dates_locales[key][\"first_part\"]\n                    half_element = dates_locales[key][\"half_part\"]\n                    second_element = dates_locales[key][\"second_part\"]\n                    return f\"{first_element} {half_element} {second_element}\"\n                else:",
         "detail": "src.Faker_library.fake_names",
         "documentation": {}
     },
@@ -481,7 +481,7 @@
         "kind": 5,
         "importPath": "src.Faker_library.fake_names",
         "description": "src.Faker_library.fake_names",
-        "peekOfCode": "fake = Faker()\nfake = Faker(locale=\"es-AR\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates[key]:\n                    first_element = dates[key][\"first_part\"]\n                    half_element = dates[key][\"half_part\"]\n                    second_element = dates[key][\"second_part\"]",
+        "peekOfCode": "fake = Faker()\nfake = Faker(locale=\"en-US\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates_locales.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates_locales[key]:\n                    first_element = dates_locales[key][\"first_part\"]\n                    half_element = dates_locales[key][\"half_part\"]\n                    second_element = dates_locales[key][\"second_part\"]",
         "detail": "src.Faker_library.fake_names",
         "documentation": {}
     },
@@ -490,7 +490,7 @@
         "kind": 5,
         "importPath": "src.Faker_library.fake_names",
         "description": "src.Faker_library.fake_names",
-        "peekOfCode": "fake = Faker(locale=\"es-AR\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates[key]:\n                    first_element = dates[key][\"first_part\"]\n                    half_element = dates[key][\"half_part\"]\n                    second_element = dates[key][\"second_part\"]\n                    return f\"{first_element} {half_element} {second_element}\"",
+        "peekOfCode": "fake = Faker(locale=\"en-US\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates_locales.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates_locales[key]:\n                    first_element = dates_locales[key][\"first_part\"]\n                    half_element = dates_locales[key][\"half_part\"]\n                    second_element = dates_locales[key][\"second_part\"]\n                    return f\"{first_element} {half_element} {second_element}\"",
         "detail": "src.Faker_library.fake_names",
         "documentation": {}
     },
