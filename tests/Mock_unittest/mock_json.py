@@ -2,13 +2,13 @@ alberto_mock_file_json = """
 {
   "nome": "Alberto",
   "idade": 56,
-  "ano_de_nascimento": 1987,
+  "ano_de_nascimento": 1968,
   "peso": 78,
   "informações_de_trabalho": {
     "local": "Belo Horizonte n° 478-Centro",
     "horario_entrada": {
-      "numero": 7,
-      "escrito": "sete horas"
+      "numero": 7.30,
+      "escrito": "sete e meia"
     },
     "horario_saida": {
       "numero": 16,

@@ -709,7 +709,7 @@
         "kind": 5,
         "importPath": "tests.Mock_unittest.mock_json",
         "description": "tests.Mock_unittest.mock_json",
-        "peekOfCode": "alberto_mock_file_json = \"\"\"\n{\n  \"nome\": \"Alberto\",\n  \"idade\": 56,\n  \"ano_de_nascimento\": 1987,\n  \"peso\": 78,\n  \"informações_de_trabalho\": {\n    \"local\": \"Belo Horizonte n° 478-Centro\",\n    \"horario_entrada\": {\n      \"numero\": 7,",
+        "peekOfCode": "alberto_mock_file_json = \"\"\"\n{\n  \"nome\": \"Alberto\",\n  \"idade\": 56,\n  \"ano_de_nascimento\": 1968,\n  \"peso\": 78,\n  \"informações_de_trabalho\": {\n    \"local\": \"Belo Horizonte n° 478-Centro\",\n    \"horario_entrada\": {\n      \"numero\": 7.30,",
         "detail": "tests.Mock_unittest.mock_json",
         "documentation": {}
     },
