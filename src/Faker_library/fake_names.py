@@ -4,7 +4,7 @@ from data_values import dates_locales
 
 fake = Faker()
 
-fake = Faker(locale="en-US")
+fake = Faker(locale="es-AR")
 
 
 class MyProvider(BaseProvider):
@@ -34,3 +34,8 @@ print(fake.email())
 print(fake.password())
 print(fake.url())
 print(fake.car_license_plate())
+
+fake_second = Faker()
+
+print(fake_second.name())
+print(fake_second.name())

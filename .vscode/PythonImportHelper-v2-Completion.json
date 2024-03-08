@@ -481,7 +481,7 @@
         "kind": 5,
         "importPath": "src.Faker_library.fake_names",
         "description": "src.Faker_library.fake_names",
-        "peekOfCode": "fake = Faker()\nfake = Faker(locale=\"en-US\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates_locales.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates_locales[key]:\n                    first_element = dates_locales[key][\"first_part\"]\n                    half_element = dates_locales[key][\"half_part\"]\n                    second_element = dates_locales[key][\"second_part\"]",
+        "peekOfCode": "fake = Faker()\nfake = Faker(locale=\"es-AR\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates_locales.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates_locales[key]:\n                    first_element = dates_locales[key][\"first_part\"]\n                    half_element = dates_locales[key][\"half_part\"]\n                    second_element = dates_locales[key][\"second_part\"]",
         "detail": "src.Faker_library.fake_names",
         "documentation": {}
     },
@@ -490,8 +490,26 @@
         "kind": 5,
         "importPath": "src.Faker_library.fake_names",
         "description": "src.Faker_library.fake_names",
-        "peekOfCode": "fake = Faker(locale=\"en-US\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates_locales.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates_locales[key]:\n                    first_element = dates_locales[key][\"first_part\"]\n                    half_element = dates_locales[key][\"half_part\"]\n                    second_element = dates_locales[key][\"second_part\"]\n                    return f\"{first_element} {half_element} {second_element}\"",
+        "peekOfCode": "fake = Faker(locale=\"es-AR\")\nclass MyProvider(BaseProvider):\n    def car_license_plate(self) -> str:\n        for key in dates_locales.keys():\n            if fake.locales[0].replace(\"_\", \"-\") == key:\n                if \"half_part\" in dates_locales[key]:\n                    first_element = dates_locales[key][\"first_part\"]\n                    half_element = dates_locales[key][\"half_part\"]\n                    second_element = dates_locales[key][\"second_part\"]\n                    return f\"{first_element} {half_element} {second_element}\"",
         "detail": "src.Faker_library.fake_names",
+        "documentation": {}
+    },
+    {
+        "label": "fake_second",
+        "kind": 5,
+        "importPath": "src.Faker_library.fake_names",
+        "description": "src.Faker_library.fake_names",
+        "peekOfCode": "fake_second = Faker()\nprint(fake_second.name())\nprint(fake_second.name())",
+        "detail": "src.Faker_library.fake_names",
+        "documentation": {}
+    },
+    {
+        "label": "generate_user_data",
+        "kind": 2,
+        "importPath": "src.Faker_library.generate_user_date",
+        "description": "src.Faker_library.generate_user_date",
+        "peekOfCode": "def generate_user_data(name, email, phone) -> str:\n    name = name.title()\n    phone = f\"+55 {phone}\"\n    return {\"Name\": name, \"Email\": email, \"Phone\": phone}\nif __name__ == \"__main__\":\n    name = \"wlisses\"\n    email = \"wlisses@gmail.com\"\n    phone = \"3176458214\"\n    print(generate_user_data(name, email, phone))",
+        "detail": "src.Faker_library.generate_user_date",
         "documentation": {}
     },
     {
@@ -828,11 +846,29 @@
         "documentation": {}
     },
     {
+        "label": "test_faker_email",
+        "kind": 2,
+        "importPath": "tests.Tests_faker.test_faker",
+        "description": "tests.Tests_faker.test_faker",
+        "peekOfCode": "def test_faker_email(faker):\n    faker_email = faker.email()\n    assert isinstance(faker_email, str)\n    assert \"@\" in faker_email\n    assert \".\" in faker_email\n    assert type(faker_email) is str\ndef test_generate_user_data(faker):\n    name = faker.name()\n    email = faker.email()\n    phone = faker.phone_number()",
+        "detail": "tests.Tests_faker.test_faker",
+        "documentation": {}
+    },
+    {
+        "label": "test_generate_user_data",
+        "kind": 2,
+        "importPath": "tests.Tests_faker.test_faker",
+        "description": "tests.Tests_faker.test_faker",
+        "peekOfCode": "def test_generate_user_data(faker):\n    name = faker.name()\n    email = faker.email()\n    phone = faker.phone_number()\n    result = generate_user_data(name, email, phone)\n    assert result[\"Name\"] == name\n    assert result[\"Email\"] == email\n    assert result[\"Phone\"] == f\"+55 {phone}\"",
+        "detail": "tests.Tests_faker.test_faker",
+        "documentation": {}
+    },
+    {
         "label": "my_list",
         "kind": 2,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "def my_list() -> List[int]:\n    return [1, 2, 3]\n@pytest.fixture\ndef high_list() -> List[int]:\n    return [1, 2, 3, 4, 5]\ndef pytest_configure(config):\n    config.addinivalue_line(\"markers\", \"slow: mark test as slow\")",
+        "peekOfCode": "def my_list() -> List[int]:\n    return [1, 2, 3]\n@pytest.fixture\ndef high_list() -> List[int]:\n    return [1, 2, 3, 4, 5]\ndef pytest_configure(config):\n    config.addinivalue_line(\"markers\", \"slow: mark test as slow\")\n# configurações de localização e semente da fixture (faker)\n# configuração do locale\n@pytest.fixture(scope=\"session\", autouse=True)",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -841,7 +877,7 @@
         "kind": 2,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "def high_list() -> List[int]:\n    return [1, 2, 3, 4, 5]\ndef pytest_configure(config):\n    config.addinivalue_line(\"markers\", \"slow: mark test as slow\")",
+        "peekOfCode": "def high_list() -> List[int]:\n    return [1, 2, 3, 4, 5]\ndef pytest_configure(config):\n    config.addinivalue_line(\"markers\", \"slow: mark test as slow\")\n# configurações de localização e semente da fixture (faker)\n# configuração do locale\n@pytest.fixture(scope=\"session\", autouse=True)\ndef faker_locale():\n    return [\"pt-BR\"]\n# configuração da seed",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -850,7 +886,25 @@
         "kind": 2,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "def pytest_configure(config):\n    config.addinivalue_line(\"markers\", \"slow: mark test as slow\")",
+        "peekOfCode": "def pytest_configure(config):\n    config.addinivalue_line(\"markers\", \"slow: mark test as slow\")\n# configurações de localização e semente da fixture (faker)\n# configuração do locale\n@pytest.fixture(scope=\"session\", autouse=True)\ndef faker_locale():\n    return [\"pt-BR\"]\n# configuração da seed\n@pytest.fixture(scope=\"session\", autouse=True)\ndef faker_seed():",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "faker_locale",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def faker_locale():\n    return [\"pt-BR\"]\n# configuração da seed\n@pytest.fixture(scope=\"session\", autouse=True)\ndef faker_seed():\n    return \"Trybe\"",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "faker_seed",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def faker_seed():\n    return \"Trybe\"",
         "detail": "tests.conftest",
         "documentation": {}
     },
