@@ -1,0 +1,10 @@
+setup.py
+source/cli.py
+source/constants.py
+source/data_base.py
+source/services.py
+task_manager.egg-info/PKG-INFO
+task_manager.egg-info/SOURCES.txt
+task_manager.egg-info/dependency_links.txt
+task_manager.egg-info/entry_points.txt
+task_manager.egg-info/top_level.txt
