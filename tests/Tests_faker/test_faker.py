@@ -1,4 +1,6 @@
+from ...src.Faker_library.create_user import create_user
 from ...src.Faker_library.generate_user_date import generate_user_data
+from faker import Faker
 
 
 def test_faker_email(faker):
@@ -19,3 +21,16 @@ def test_generate_user_data(faker):
     assert result["Name"] == name
     assert result["Email"] == email
     assert result["Phone"] == f"+55 {phone}"
+
+
+def test_create_user():
+    fake = Faker(locale="pt-BR")
+    Faker.seed("Wlisses")
+    name = fake.name()
+    email = fake.email()
+
+    result = create_user(name, email)
+    assert name.startswith(result["first_name"])
+    assert name.endswith(result["last_name"])
+    assert email is result["email"]
+    assert email.endswith(result["email_domain"])
