@@ -1,5 +1,5 @@
 from constants import DATABASE_PATH
-from util.service_util import remove_zero, prepare_values
+from util.service_util import remove_zero, prepare_values, sort_data_base
 import json
 
 
@@ -26,11 +26,13 @@ def insert_task(title, description):
     content = get_all_tasks()
     object_value = prepare_values(title, description, content)
     content.append(object_value)
+    content = sort_data_base(content)
     with open(DATABASE_PATH, "w") as file:
         file.write(json.dumps(content))
 
 
-insert_task("fist_title_task", "first_description_task")
+def update_task():
+    return True
 
 
 def remove_task(id):
@@ -43,6 +45,3 @@ def remove_task(id):
 
     with open(DATABASE_PATH, "w") as file:
         file.write(json.dumps(new_list))
-
-
-# remove_task(input("digite: "))

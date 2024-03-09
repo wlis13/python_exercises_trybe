@@ -39,3 +39,8 @@ def prepare_values(title, description, content):
         "title": title,
         "description": description,
     }
+
+
+def sort_data_base(content):
+    sorted_data_base = sorted(content, key=lambda x: int(x["id"]))
+    return sorted_data_base
