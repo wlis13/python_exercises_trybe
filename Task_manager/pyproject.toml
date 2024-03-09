@@ -1,0 +1,2 @@
+[project.scripts]
+tsk = "Task_manager.cli:main"
