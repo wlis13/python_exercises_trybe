@@ -38,6 +38,10 @@ def db_completed_task():
     completed_task(choosed_task)
 
 
+def db_update_task():
+    return True
+
+
 def db_get_one_task():
     content = get_all_tasks()
     input_title = input("Digite o título da tarefa desejada: ")

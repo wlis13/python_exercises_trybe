@@ -1,6 +1,5 @@
 from source.services import (
     exit_app,
-    update_task,
 )
 from source.data_base import (
     db_insert_task,
@@ -9,6 +8,7 @@ from source.data_base import (
     db_list_not_complet_tasks,
     db_remove_task,
     db_get_all_tasks,
+    db_update_task,
 )
 
 
@@ -17,7 +17,7 @@ def get_options():
         ["Sair", exit_app],
         ["Adicionar tarefa", db_insert_task],
         ["Completar tarefa", db_completed_task],
-        ["Atualizar tarefa", update_task],
+        ["Atualizar tarefa", db_update_task],
         ["Listar todas as tarefas", db_get_all_tasks],
         ["Listar uma tarefa", db_get_one_task],
         ["Listar tarefas pendêntes", db_list_not_complet_tasks],

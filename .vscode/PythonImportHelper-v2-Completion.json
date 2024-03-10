@@ -8,14 +8,6 @@
         "documentation": {}
     },
     {
-        "label": "update_task",
-        "importPath": "source.services",
-        "description": "source.services",
-        "isExtraImport": true,
-        "detail": "source.services",
-        "documentation": {}
-    },
-    {
         "label": "insert_task",
         "importPath": "source.services",
         "description": "source.services",
@@ -89,6 +81,14 @@
     },
     {
         "label": "db_get_all_tasks",
+        "importPath": "source.data_base",
+        "description": "source.data_base",
+        "isExtraImport": true,
+        "detail": "source.data_base",
+        "documentation": {}
+    },
+    {
+        "label": "db_update_task",
         "importPath": "source.data_base",
         "description": "source.data_base",
         "isExtraImport": true,
@@ -478,16 +478,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.util.service_util",
         "description": "Task_manager.source.util.service_util",
-        "peekOfCode": "def create_id(content):\n    if len(content) < 10:\n        id_value = f\"0{int(len(content)) + 1}\"\n    else:\n        id_value = f\"{int(len(content)) + 1}\"\n    return id_value\ndef added_zero(id):\n    if int(id) < 10:\n        id_value = f\"0{id}\"\n    else:",
-        "detail": "Task_manager.source.util.service_util",
-        "documentation": {}
-    },
-    {
-        "label": "added_zero",
-        "kind": 2,
-        "importPath": "Task_manager.source.util.service_util",
-        "description": "Task_manager.source.util.service_util",
-        "peekOfCode": "def added_zero(id):\n    if int(id) < 10:\n        id_value = f\"0{id}\"\n    else:\n        id_value = f\"{id}\"\n    return id_value\ndef sort_id(id, content):\n    if len(content) > 0:\n        for value in content:\n            if value[\"id\"] == id:",
+        "peekOfCode": "def create_id(content):\n    if len(content) < 10:\n        id_value = f\"0{int(len(content)) + 1}\"\n    else:\n        id_value = f\"{int(len(content)) + 1}\"\n    return id_value\ndef sort_id(id, content):\n    if len(content) > 0:\n        for value in content:\n            if value[\"id\"] == id:",
         "detail": "Task_manager.source.util.service_util",
         "documentation": {}
     },
@@ -496,7 +487,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.util.service_util",
         "description": "Task_manager.source.util.service_util",
-        "peekOfCode": "def sort_id(id, content):\n    if len(content) > 0:\n        for value in content:\n            if value[\"id\"] == id:\n                id = int(id) - 1\n                break\n        return added_zero(id)\ndef prepare_values(title, description, content):\n    new_id = sort_id(create_id(content), content)\n    return {",
+        "peekOfCode": "def sort_id(id, content):\n    if len(content) > 0:\n        for value in content:\n            if value[\"id\"] == id:\n                id = int(id) - 1\n                break\n        return str(id)\n    else:\n        return id\ndef prepare_values(title, description, content):",
         "detail": "Task_manager.source.util.service_util",
         "documentation": {}
     },
@@ -523,7 +514,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.cli",
         "description": "Task_manager.source.cli",
-        "peekOfCode": "def get_options():\n    return (\n        [\"Sair\", exit_app],\n        [\"Adicionar tarefa\", db_insert_task],\n        [\"Completar tarefa\", db_completed_task],\n        [\"Atualizar tarefa\", update_task],\n        [\"Listar todas as tarefas\", db_get_all_tasks],\n        [\"Listar uma tarefa\", db_get_one_task],\n        [\"Listar tarefas pendêntes\", db_list_not_complet_tasks],\n        [\"Deletar tarefa\", db_remove_task],",
+        "peekOfCode": "def get_options():\n    return (\n        [\"Sair\", exit_app],\n        [\"Adicionar tarefa\", db_insert_task],\n        [\"Completar tarefa\", db_completed_task],\n        [\"Atualizar tarefa\", db_update_task],\n        [\"Listar todas as tarefas\", db_get_all_tasks],\n        [\"Listar uma tarefa\", db_get_one_task],\n        [\"Listar tarefas pendêntes\", db_list_not_complet_tasks],\n        [\"Deletar tarefa\", db_remove_task],",
         "detail": "Task_manager.source.cli",
         "documentation": {}
     },
@@ -568,7 +559,16 @@
         "kind": 2,
         "importPath": "Task_manager.source.data_base",
         "description": "Task_manager.source.data_base",
-        "peekOfCode": "def db_completed_task():\n    content = get_all_tasks()\n    tasks_not_complet = list_not_complet_task(content)\n    for index, value in enumerate(tasks_not_complet):\n        print(f\"{index + 1} - {value['title']}\")\n    get_input = input(\n        \"Digite o número referente a função que você deseja completar: \"\n    )\n    choosed_task = tasks_not_complet[get_input][\"id\"]\n    completed_task(choosed_task)",
+        "peekOfCode": "def db_completed_task():\n    content = get_all_tasks()\n    tasks_not_complet = list_not_complet_task(content)\n    for index, value in enumerate(tasks_not_complet):\n        print(f\"{index + 1} - {value['title']}\")\n    get_input = input(\n        \"Digite o número referente a função que você deseja completar: \"\n    )\n    choosed_task = tasks_not_complet[int(get_input) - 1][\"id\"]\n    completed_task(choosed_task)",
+        "detail": "Task_manager.source.data_base",
+        "documentation": {}
+    },
+    {
+        "label": "db_update_task",
+        "kind": 2,
+        "importPath": "Task_manager.source.data_base",
+        "description": "Task_manager.source.data_base",
+        "peekOfCode": "def db_update_task():\n    return True\ndef db_get_one_task():\n    content = get_all_tasks()\n    input_title = input(\"Digite o título da tarefa desejada: \")\n    return [task for task in content if task[\"title\"] == input_title][0]\ndef db_list_not_complet_tasks():\n    content = get_all_tasks()\n    return list_not_complet_task(content)\ndef db_remove_task():",
         "detail": "Task_manager.source.data_base",
         "documentation": {}
     },
@@ -604,7 +604,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.services",
         "description": "Task_manager.source.services",
-        "peekOfCode": "def get_all_tasks():\n    try:\n        with open(DATABASE_PATH, \"r\") as file:\n            return json.load(file)\n    except json.JSONDecodeError:\n        return [1, 2]\ndef get_one_task(id):\n    content = get_all_tasks()\n    if len(content) > 0:\n        for index, value in enumerate(content):",
+        "peekOfCode": "def get_all_tasks():\n    try:\n        with open(DATABASE_PATH, \"r\") as file:\n            return json.load(file)\n    except json.JSONDecodeError:\n        return []\ndef get_one_task(id):\n    content = get_all_tasks()\n    if len(content) > 0:\n        for index, value in enumerate(content):",
         "detail": "Task_manager.source.services",
         "documentation": {}
     },
@@ -622,7 +622,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.services",
         "description": "Task_manager.source.services",
-        "peekOfCode": "def insert_task(title, description):\n    content = get_all_tasks()\n    object_value = prepare_values(title, description, content)\n    content.append(object_value)\n    content = sort_data_base(content)\n    with open(DATABASE_PATH, \"w\") as file:\n        file.write(json.dumps(content))\ndef update_task(id, new_title, new_description, new_completed):\n    content = get_all_tasks()\n    for index, value in enumerate(content):",
+        "peekOfCode": "def insert_task(title, description):\n    content = get_all_tasks()\n    new_task = prepare_values(title, description, content)\n    content.append(new_task)\n    content = sort_data_base(content)\n    with open(DATABASE_PATH, \"w\") as file:\n        file.write(json.dumps(content))\ndef update_task(id, new_title, new_description, new_completed):\n    content = get_all_tasks()\n    for index, value in enumerate(content):",
         "detail": "Task_manager.source.services",
         "documentation": {}
     },
