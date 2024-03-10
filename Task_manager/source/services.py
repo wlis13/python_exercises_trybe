@@ -11,10 +11,9 @@ import sys
 def get_all_tasks():
     try:
         with open(DATABASE_PATH, "r") as file:
-            content = json.load(file)
-            return content
+            return json.load(file)
     except json.JSONDecodeError:
-        return []
+        return [1, 2]
 
 
 def get_one_task(id):

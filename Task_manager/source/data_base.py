@@ -7,6 +7,10 @@ from source.services import (
 from source.util.data_base_util import list_not_complet_task
 
 
+def db_get_all_tasks():
+    print(get_all_tasks())
+
+
 def db_insert_task():
     title = input("Digite o título da nova tarefa: ")
     description = input("Digite a descrição da nova tarefa: ")
