@@ -8,7 +8,15 @@ from source.util.data_base_util import list_not_complet_task
 
 
 def db_get_all_tasks():
-    print(get_all_tasks())
+    content = get_all_tasks()
+    for value in content:
+        print(
+            f"""
+            Título - {value["title"]}
+            Descrição - {value["description"]}
+            Completa - {str(value["completed"]).upper()}
+            """
+        )
 
 
 def db_insert_task():
