@@ -1,7 +1,6 @@
 from source.services import (
     exit_app,
     update_task,
-    get_all_tasks,
 )
 from source.data_base import (
     db_insert_task,
