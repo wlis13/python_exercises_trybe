@@ -14,22 +14,15 @@ def create_id(content):
     return id_value
 
 
-def added_zero(id):
-    if int(id) < 10:
-        id_value = f"0{id}"
-    else:
-        id_value = f"{id}"
-
-    return id_value
-
-
 def sort_id(id, content):
     if len(content) > 0:
         for value in content:
             if value["id"] == id:
                 id = int(id) - 1
                 break
-        return added_zero(id)
+        return str(id)
+    else:
+        return id
 
 
 def prepare_values(title, description, content):

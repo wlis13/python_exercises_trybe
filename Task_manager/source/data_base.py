@@ -34,7 +34,7 @@ def db_completed_task():
     get_input = input(
         "Digite o número referente a função que você deseja completar: "
     )
-    choosed_task = tasks_not_complet[get_input]["id"]
+    choosed_task = tasks_not_complet[int(get_input) - 1]["id"]
     completed_task(choosed_task)
 
 

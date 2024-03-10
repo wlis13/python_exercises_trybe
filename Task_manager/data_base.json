@@ -1,23 +1,20 @@
 [
   {
     "id": "01",
-    "title": "fist_title_task",
-    "description": "first_description_task"
+    "title": "First title to task",
+    "description": "First description to task",
+    "completed": false
   },
   {
     "id": "02",
-    "title": "fist_title_task",
-    "description": "first_description_task"
+    "title": "Second title to task",
+    "description": "Second description to task",
+    "completed": true
   },
   {
     "id": "03",
-    "title": "fist_title_task",
-    "description": "first_description_task"
-  },
-  {
-    "id": "004",
-    "title": "teste com a primeira tarefa",
-    "description": "teste com a primeira descri\u00e7\u00e3o",
-    "completed": false
+    "title": "Thirth title to task",
+    "description": "Thirth description to task",
+    "completed": true
   }
 ]

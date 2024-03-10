@@ -13,7 +13,7 @@ def get_all_tasks():
         with open(DATABASE_PATH, "r") as file:
             return json.load(file)
     except json.JSONDecodeError:
-        return [1, 2]
+        return []
 
 
 def get_one_task(id):
@@ -28,8 +28,8 @@ def get_one_task(id):
 
 def insert_task(title, description):
     content = get_all_tasks()
-    object_value = prepare_values(title, description, content)
-    content.append(object_value)
+    new_task = prepare_values(title, description, content)
+    content.append(new_task)
     content = sort_data_base(content)
     with open(DATABASE_PATH, "w") as file:
         file.write(json.dumps(content))
