@@ -38,6 +38,7 @@ def prepare_values(title, description, content):
         "id": new_id,
         "title": title,
         "description": description,
+        "completed": False,
     }
 
 

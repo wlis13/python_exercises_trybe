@@ -1,6 +1,7 @@
 from constants import DATABASE_PATH
 from util.service_util import remove_zero, prepare_values, sort_data_base
 import json
+import sys
 
 
 def get_all_tasks():
@@ -19,7 +20,7 @@ def get_one_task(id):
             if content[index]["id"] is id:
                 return value
     else:
-        return "O banco de dados está vazio."
+        return "Sua lista de tarefas está vazia."
 
 
 def insert_task(title, description):
@@ -31,8 +32,18 @@ def insert_task(title, description):
         file.write(json.dumps(content))
 
 
-def update_task():
-    return True
+def update_task(id, new_title, new_description, new_completed):
+    content = get_all_tasks()
+    for index, value in enumerate(content):
+        if value["id"] == id:
+            content[index] = {
+                "title": new_title,
+                "description": new_description,
+                "completed": new_completed,
+            }
+
+    with open(DATABASE_PATH, "w") as file:
+        file.write(json.dumps(content))
 
 
 def remove_task(id):
@@ -45,3 +56,17 @@ def remove_task(id):
 
     with open(DATABASE_PATH, "w") as file:
         file.write(json.dumps(new_list))
+
+
+def completed_task(id):
+    content = get_all_tasks()
+    for index, value in enumerate(content):
+        if value["id"] == id:
+            content[index]["completed"] = True
+
+    with open(DATABASE_PATH, "w") as file:
+        file.write(json.dumps(content))
+
+
+def exit_app():
+    sys.exit(0)
