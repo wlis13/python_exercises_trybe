@@ -1,5 +1,10 @@
-from services import insert_task, get_all_tasks, completed_task, remove_task
-from util.data_base_util import list_not_complet_task
+from source.services import (
+    insert_task,
+    get_all_tasks,
+    completed_task,
+    remove_task,
+)
+from source.util.data_base_util import list_not_complet_task
 
 
 def db_insert_task():
