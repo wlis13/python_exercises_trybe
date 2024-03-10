@@ -1,4 +1,4 @@
-from services import insert_task, get_all_tasks, completed_task
+from services import insert_task, get_all_tasks, completed_task, remove_task
 from util.data_base_util import list_not_complet_task
 
 
@@ -26,3 +26,18 @@ def db_get_one_task():
     input_title = input("Digite o título da tarefa desejada: ")
 
     return [task for task in content if task["title"] == input_title][0]
+
+
+def db_list_not_complet_tasks():
+    content = get_all_tasks()
+    return list_not_complet_task(content)
+
+
+def db_remove_task():
+    content = get_all_tasks()
+    input_title = input("Digite o título da tafefa que você quer remover: ")
+    for value in content:
+        if value["title"] == input_title:
+            remove_task(value["id"])
+        else:
+            return "A tarefa não existe."

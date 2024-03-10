@@ -1,5 +1,11 @@
 from services import exit_app, update_task, get_all_tasks
-from data_base import db_insert_task, db_completed_task, db_get_one_task
+from data_base import (
+    db_insert_task,
+    db_completed_task,
+    db_get_one_task,
+    db_list_not_complet_tasks,
+    db_remove_task,
+)
 
 
 def get_options():
@@ -10,8 +16,8 @@ def get_options():
         {"Atualizar tarefa", update_task},
         {"Listar todas as tarefas", get_all_tasks},
         {"Listar uma tarefa", db_get_one_task},
-        {"Listar tarefas pendêntes"},
-        {"Deletar tarefa"},
+        {"Listar tarefas pendêntes", db_list_not_complet_tasks},
+        {"Deletar tarefa", db_remove_task},
     )
 
 

@@ -53,9 +53,11 @@ def remove_task(id):
         for index, value in enumerate(content):
             if content[index]["id"] != remove_zero(id):
                 new_list.append(value)
-
-    with open(DATABASE_PATH, "w") as file:
-        file.write(json.dumps(new_list))
+    try:
+        with open(DATABASE_PATH, "w") as file:
+            file.write(json.dumps(new_list))
+    except ValueError:
+        return "Tarefa inválida."
 
 
 def completed_task(id):
