@@ -1,5 +1,79 @@
 [
     {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_PATH",
+        "importPath": "constants",
+        "description": "constants",
+        "isExtraImport": true,
+        "detail": "constants",
+        "documentation": {}
+    },
+    {
+        "label": "remove_zero",
+        "importPath": "util.service_util",
+        "description": "util.service_util",
+        "isExtraImport": true,
+        "detail": "util.service_util",
+        "documentation": {}
+    },
+    {
+        "label": "prepare_values",
+        "importPath": "util.service_util",
+        "description": "util.service_util",
+        "isExtraImport": true,
+        "detail": "util.service_util",
+        "documentation": {}
+    },
+    {
+        "label": "sort_data_base",
+        "importPath": "util.service_util",
+        "description": "util.service_util",
+        "isExtraImport": true,
+        "detail": "util.service_util",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "isExtraImport": true,
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -95,14 +169,6 @@
         "description": "unittest.mock",
         "isExtraImport": true,
         "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "setup",
-        "importPath": "setuptools",
-        "description": "setuptools",
-        "isExtraImport": true,
-        "detail": "setuptools",
         "documentation": {}
     },
     {
@@ -235,30 +301,12 @@
         "documentation": {}
     },
     {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
         "label": "csv",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "csv",
         "description": "csv",
         "detail": "csv",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
         "documentation": {}
     },
     {
@@ -301,6 +349,132 @@
         "description": "math",
         "isExtraImport": true,
         "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "remove_zero",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.service_util",
+        "description": "Task_manager.source.util.service_util",
+        "peekOfCode": "def remove_zero(id):\n    if int(id) < 10 and len(id) < 2:\n        return f\"0{id}\"\n    else:\n        return id\ndef create_id(content):\n    if len(content) < 10:\n        id_value = f\"0{int(len(content)) + 1}\"\n    else:\n        id_value = f\"{int(len(content)) + 1}\"",
+        "detail": "Task_manager.source.util.service_util",
+        "documentation": {}
+    },
+    {
+        "label": "create_id",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.service_util",
+        "description": "Task_manager.source.util.service_util",
+        "peekOfCode": "def create_id(content):\n    if len(content) < 10:\n        id_value = f\"0{int(len(content)) + 1}\"\n    else:\n        id_value = f\"{int(len(content)) + 1}\"\n    return id_value\ndef added_zero(id):\n    if int(id) < 10:\n        id_value = f\"0{id}\"\n    else:",
+        "detail": "Task_manager.source.util.service_util",
+        "documentation": {}
+    },
+    {
+        "label": "added_zero",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.service_util",
+        "description": "Task_manager.source.util.service_util",
+        "peekOfCode": "def added_zero(id):\n    if int(id) < 10:\n        id_value = f\"0{id}\"\n    else:\n        id_value = f\"{id}\"\n    return id_value\ndef sort_id(id, content):\n    if len(content) > 0:\n        for value in content:\n            if value[\"id\"] == id:",
+        "detail": "Task_manager.source.util.service_util",
+        "documentation": {}
+    },
+    {
+        "label": "sort_id",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.service_util",
+        "description": "Task_manager.source.util.service_util",
+        "peekOfCode": "def sort_id(id, content):\n    if len(content) > 0:\n        for value in content:\n            if value[\"id\"] == id:\n                id = int(id) - 1\n                break\n        return added_zero(id)\ndef prepare_values(title, description, content):\n    new_id = sort_id(create_id(content), content)\n    return {",
+        "detail": "Task_manager.source.util.service_util",
+        "documentation": {}
+    },
+    {
+        "label": "prepare_values",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.service_util",
+        "description": "Task_manager.source.util.service_util",
+        "peekOfCode": "def prepare_values(title, description, content):\n    new_id = sort_id(create_id(content), content)\n    return {\n        \"id\": new_id,\n        \"title\": title,\n        \"description\": description,\n    }\ndef sort_data_base(content):\n    sorted_data_base = sorted(content, key=lambda x: int(x[\"id\"]))\n    return sorted_data_base",
+        "detail": "Task_manager.source.util.service_util",
+        "documentation": {}
+    },
+    {
+        "label": "sort_data_base",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.service_util",
+        "description": "Task_manager.source.util.service_util",
+        "peekOfCode": "def sort_data_base(content):\n    sorted_data_base = sorted(content, key=lambda x: int(x[\"id\"]))\n    return sorted_data_base",
+        "detail": "Task_manager.source.util.service_util",
+        "documentation": {}
+    },
+    {
+        "label": "get_options",
+        "kind": 2,
+        "importPath": "Task_manager.source.cli",
+        "description": "Task_manager.source.cli",
+        "peekOfCode": "def get_options():\n    return (\n        \"Sair\",\n        \"Adicionar tarefa\",\n        \"Completar tarefa\",\n        \"Listar todas as tarefas\",\n        \"Listar tarefas pendêntes\",\n        \"Deletar tarefa\",\n    )\ndef main():",
+        "detail": "Task_manager.source.cli",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Task_manager.source.cli",
+        "description": "Task_manager.source.cli",
+        "peekOfCode": "def main():\n    print(\"> Opções:\")\n    print(\"\")\n    for index, option in enumerate(get_options()):\n        print(f\"{index}: {option}\")\n    selected_option = int(input(\"> Digite a opção desejada: \"))\n    try:\n        print(selected_option)\n    except IndexError:\n        print(\"> Opção inválida\")",
+        "detail": "Task_manager.source.cli",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_PATH",
+        "kind": 5,
+        "importPath": "Task_manager.source.constants",
+        "description": "Task_manager.source.constants",
+        "peekOfCode": "DATABASE_PATH = os.environ[\"TSK_DB_PATH\"]",
+        "detail": "Task_manager.source.constants",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_tasks",
+        "kind": 2,
+        "importPath": "Task_manager.source.services",
+        "description": "Task_manager.source.services",
+        "peekOfCode": "def get_all_tasks():\n    try:\n        with open(DATABASE_PATH, \"r\") as file:\n            content = json.load(file)\n            return content\n    except json.JSONDecodeError:\n        return []\ndef get_one_task(id):\n    content = get_all_tasks()\n    if len(content) > 0:",
+        "detail": "Task_manager.source.services",
+        "documentation": {}
+    },
+    {
+        "label": "get_one_task",
+        "kind": 2,
+        "importPath": "Task_manager.source.services",
+        "description": "Task_manager.source.services",
+        "peekOfCode": "def get_one_task(id):\n    content = get_all_tasks()\n    if len(content) > 0:\n        for index, value in enumerate(content):\n            if content[index][\"id\"] is id:\n                return value\n    else:\n        return \"O banco de dados está vazio.\"\ndef insert_task(title, description):\n    content = get_all_tasks()",
+        "detail": "Task_manager.source.services",
+        "documentation": {}
+    },
+    {
+        "label": "insert_task",
+        "kind": 2,
+        "importPath": "Task_manager.source.services",
+        "description": "Task_manager.source.services",
+        "peekOfCode": "def insert_task(title, description):\n    content = get_all_tasks()\n    object_value = prepare_values(title, description, content)\n    content.append(object_value)\n    content = sort_data_base(content)\n    with open(DATABASE_PATH, \"w\") as file:\n        file.write(json.dumps(content))\ndef update_task():\n    return True\ndef remove_task(id):",
+        "detail": "Task_manager.source.services",
+        "documentation": {}
+    },
+    {
+        "label": "update_task",
+        "kind": 2,
+        "importPath": "Task_manager.source.services",
+        "description": "Task_manager.source.services",
+        "peekOfCode": "def update_task():\n    return True\ndef remove_task(id):\n    content = get_all_tasks()\n    new_list = []\n    if len(content) > 0:\n        for index, value in enumerate(content):\n            if content[index][\"id\"] != remove_zero(id):\n                new_list.append(value)\n    with open(DATABASE_PATH, \"w\") as file:",
+        "detail": "Task_manager.source.services",
+        "documentation": {}
+    },
+    {
+        "label": "remove_task",
+        "kind": 2,
+        "importPath": "Task_manager.source.services",
+        "description": "Task_manager.source.services",
+        "peekOfCode": "def remove_task(id):\n    content = get_all_tasks()\n    new_list = []\n    if len(content) > 0:\n        for index, value in enumerate(content):\n            if content[index][\"id\"] != remove_zero(id):\n                new_list.append(value)\n    with open(DATABASE_PATH, \"w\") as file:\n        file.write(json.dumps(new_list))",
+        "detail": "Task_manager.source.services",
         "documentation": {}
     },
     {
