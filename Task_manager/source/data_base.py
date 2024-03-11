@@ -4,7 +4,10 @@ from source.services import (
     completed_task,
     remove_task,
 )
-from source.util.data_base_util import list_not_complet_task
+from source.util.data_base_util import (
+    list_not_complet_task,
+    return_formatted_values,
+)
 
 
 def db_get_all_tasks():
@@ -39,7 +42,13 @@ def db_completed_task():
 
 
 def db_update_task():
-    return True
+    content = get_all_tasks()
+    for index, value in enumerate(content):
+        print(f"{index + 1} - Título - {value['title']}")
+
+    input_title = int(input("Digite o número da tarefa desejada: "))
+    print("Dados atuais da tarefa:")
+    print(return_formatted_values(content[input_title - 1]))
 
 
 def db_get_one_task():
