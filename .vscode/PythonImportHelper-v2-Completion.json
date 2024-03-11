@@ -40,6 +40,14 @@
         "documentation": {}
     },
     {
+        "label": "update_task",
+        "importPath": "source.services",
+        "description": "source.services",
+        "isExtraImport": true,
+        "detail": "source.services",
+        "documentation": {}
+    },
+    {
         "label": "db_insert_task",
         "importPath": "source.data_base",
         "description": "source.data_base",
@@ -121,19 +129,67 @@
         "documentation": {}
     },
     {
+        "label": "return_formatted_values",
+        "importPath": "source.util.data_base_util",
+        "description": "source.util.data_base_util",
+        "isExtraImport": true,
+        "detail": "source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "update_menu",
+        "importPath": "source.util.data_base_util",
+        "description": "source.util.data_base_util",
+        "isExtraImport": true,
+        "detail": "source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "handle_update_all_value_task",
+        "importPath": "source.util.data_base_util",
+        "description": "source.util.data_base_util",
+        "isExtraImport": true,
+        "detail": "source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "handle_update_one_value_task",
+        "importPath": "source.util.data_base_util",
+        "description": "source.util.data_base_util",
+        "isExtraImport": true,
+        "detail": "source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "return_formatted_list_value",
+        "importPath": "source.util.data_base_util",
+        "description": "source.util.data_base_util",
+        "isExtraImport": true,
+        "detail": "source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "return_title_values",
+        "importPath": "source.util.data_base_util",
+        "description": "source.util.data_base_util",
+        "isExtraImport": true,
+        "detail": "source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "return_formatted_data_base_tasks",
+        "importPath": "source.util.data_base_util",
+        "description": "source.util.data_base_util",
+        "isExtraImport": true,
+        "detail": "source.util.data_base_util",
+        "documentation": {}
+    },
+    {
         "label": "DATABASE_PATH",
         "importPath": "source.constants",
         "description": "source.constants",
         "isExtraImport": true,
         "detail": "source.constants",
-        "documentation": {}
-    },
-    {
-        "label": "remove_zero",
-        "importPath": "source.util.service_util",
-        "description": "source.util.service_util",
-        "isExtraImport": true,
-        "detail": "source.util.service_util",
         "documentation": {}
     },
     {
@@ -460,7 +516,106 @@
         "kind": 2,
         "importPath": "Task_manager.source.util.data_base_util",
         "description": "Task_manager.source.util.data_base_util",
-        "peekOfCode": "def list_not_complet_task(content):\n    tasks = [task for task in content if task[\"completed\"] is False]\n    return tasks",
+        "peekOfCode": "def list_not_complet_task(content):\n    tasks = [task for task in content if task[\"completed\"] is False]\n    return tasks\ndef return_formatted_values(task):\n    if task[\"completed\"] is False:\n        completed = \"Não\"\n    else:\n        completed = \"Sim\"\n    return f\"\"\"\n    Título - {task[\"title\"]}",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "return_formatted_values",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def return_formatted_values(task):\n    if task[\"completed\"] is False:\n        completed = \"Não\"\n    else:\n        completed = \"Sim\"\n    return f\"\"\"\n    Título - {task[\"title\"]}\n    Descrição - {task[\"description\"]}\n    Completa - {completed}\n    \"\"\"",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "return_title_values",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def return_title_values(title, data_base):\n    print(title)\n    print()\n    for index, data in enumerate(data_base):\n        print(f\"{index + 1} - {data['title']}\")\n    print()\ndef return_formatted_list_value(value):\n    if value is False:\n        return \"Não\"\n    else:",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "return_formatted_list_value",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def return_formatted_list_value(value):\n    if value is False:\n        return \"Não\"\n    else:\n        return \"Sim\"\ndef return_formatted_data_base_tasks(data_base):\n    for index, value in enumerate(data_base):\n        print(\n            f\"\"\"\n        Índice: {index + 1}",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "return_formatted_data_base_tasks",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def return_formatted_data_base_tasks(data_base):\n    for index, value in enumerate(data_base):\n        print(\n            f\"\"\"\n        Índice: {index + 1}\n        Título - {value[\"title\"]}\n        Descrição - {value[\"description\"]}\n        Completa? - {return_formatted_list_value(value[\"completed\"])}\n        \"\"\"\n        )",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "update_menu",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def update_menu():\n    print(\"1 - Alterar todos os dados\")\n    print(\"2 - Alterar um dos dados\")\n    print(\"3 - Manter os dados atuais\")\ndef handle_boolean_value(value):\n    if value == \"1\":\n        return True\n    elif value == \"2\":\n        return False\n    else:",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "handle_boolean_value",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def handle_boolean_value(value):\n    if value == \"1\":\n        return True\n    elif value == \"2\":\n        return False\n    else:\n        return \"Opção inválida.\"\ndef handle_update_all_value_task(input_value):\n    if input_value == \"1\":\n        new_title = input(\"Digite o novo título: \")",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "handle_update_all_value_task",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def handle_update_all_value_task(input_value):\n    if input_value == \"1\":\n        new_title = input(\"Digite o novo título: \")\n        new_description = input(\"Digite a nova descrição: \")\n        print(\"A tarefa está completa?\")\n        print(\"1 - Sim\")\n        print(\"2 - Não\")\n        new_completed = input(\"Digite 1 para Sim e 2 para Não: \")\n        return [\n            new_title,",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "handle_select_title",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def handle_select_title(title, task):\n    task[\"title\"] = title\n    return task\ndef handle_select_description(description, task):\n    task[\"description\"] = description\n    return task\ndef handle_select_completed(completed, task):\n    if completed == \"1\":\n        task[\"completed\"] = True\n    else:",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "handle_select_description",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def handle_select_description(description, task):\n    task[\"description\"] = description\n    return task\ndef handle_select_completed(completed, task):\n    if completed == \"1\":\n        task[\"completed\"] = True\n    else:\n        task[\"completed\"] = False\n    return task\ndef handle_update_one_value_task(input_value, task):",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "handle_select_completed",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def handle_select_completed(completed, task):\n    if completed == \"1\":\n        task[\"completed\"] = True\n    else:\n        task[\"completed\"] = False\n    return task\ndef handle_update_one_value_task(input_value, task):\n    if input_value == \"2\":\n        print(\"1 - Título\")\n        print(\"2 - Descrição\")",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "handle_update_one_value_task",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def handle_update_one_value_task(input_value, task):\n    if input_value == \"2\":\n        print(\"1 - Título\")\n        print(\"2 - Descrição\")\n        print(\"3 - Completa\")\n        selected_option = input(\n            \"Escolha qual informação você quer atualizar: \"\n        )\n        if selected_option == \"1\":\n            title = input(\"Digite o novo título: \")",
         "detail": "Task_manager.source.util.data_base_util",
         "documentation": {}
     },
@@ -541,34 +696,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.data_base",
         "description": "Task_manager.source.data_base",
-        "peekOfCode": "def db_get_all_tasks():\n    content = get_all_tasks()\n    for value in content:\n        print(\n            f\"\"\"\n            Título - {value[\"title\"]}\n            Descrição - {value[\"description\"]}\n            Completa - {str(value[\"completed\"]).upper()}\n            \"\"\"\n        )",
-        "detail": "Task_manager.source.data_base",
-        "documentation": {}
-    },
-    {
-        "label": "db_insert_task",
-        "kind": 2,
-        "importPath": "Task_manager.source.data_base",
-        "description": "Task_manager.source.data_base",
-        "peekOfCode": "def db_insert_task():\n    title = input(\"Digite o título da nova tarefa: \")\n    description = input(\"Digite a descrição da nova tarefa: \")\n    insert_task(title, description)\ndef db_completed_task():\n    content = get_all_tasks()\n    tasks_not_complet = list_not_complet_task(content)\n    for index, value in enumerate(tasks_not_complet):\n        print(f\"{index + 1} - {value['title']}\")\n    get_input = input(",
-        "detail": "Task_manager.source.data_base",
-        "documentation": {}
-    },
-    {
-        "label": "db_completed_task",
-        "kind": 2,
-        "importPath": "Task_manager.source.data_base",
-        "description": "Task_manager.source.data_base",
-        "peekOfCode": "def db_completed_task():\n    content = get_all_tasks()\n    tasks_not_complet = list_not_complet_task(content)\n    for index, value in enumerate(tasks_not_complet):\n        print(f\"{index + 1} - {value['title']}\")\n    get_input = input(\n        \"Digite o número referente a função que você deseja completar: \"\n    )\n    choosed_task = tasks_not_complet[int(get_input) - 1][\"id\"]\n    completed_task(choosed_task)",
-        "detail": "Task_manager.source.data_base",
-        "documentation": {}
-    },
-    {
-        "label": "db_update_task",
-        "kind": 2,
-        "importPath": "Task_manager.source.data_base",
-        "description": "Task_manager.source.data_base",
-        "peekOfCode": "def db_update_task():\n    return True\ndef db_get_one_task():\n    content = get_all_tasks()\n    input_title = input(\"Digite o título da tarefa desejada: \")\n    return [task for task in content if task[\"title\"] == input_title][0]\ndef db_list_not_complet_tasks():\n    content = get_all_tasks()\n    return list_not_complet_task(content)\ndef db_remove_task():",
+        "peekOfCode": "def db_get_all_tasks():\n    content = get_all_tasks()\n    print(\"TODAS AS TAREFAS:\")\n    for index, value in enumerate(content):\n        print(f\"Índice: ({index + 1})---------------------------\")\n        print(\n            f\"\"\"\n        Título - {value[\"title\"]}\n        Descrição - {value[\"description\"]}\n        Completa - {return_formatted_list_value(value[\"completed\"])}",
         "detail": "Task_manager.source.data_base",
         "documentation": {}
     },
@@ -577,7 +705,34 @@
         "kind": 2,
         "importPath": "Task_manager.source.data_base",
         "description": "Task_manager.source.data_base",
-        "peekOfCode": "def db_get_one_task():\n    content = get_all_tasks()\n    input_title = input(\"Digite o título da tarefa desejada: \")\n    return [task for task in content if task[\"title\"] == input_title][0]\ndef db_list_not_complet_tasks():\n    content = get_all_tasks()\n    return list_not_complet_task(content)\ndef db_remove_task():\n    content = get_all_tasks()\n    input_title = input(\"Digite o título da tafefa que você quer remover: \")",
+        "peekOfCode": "def db_get_one_task():\n    content = get_all_tasks()\n    return_title_values(\"ESCOLHA A TAREFA:\", content)\n    input_title = input(\"Digite o número da tarefa desejada: \")\n    value_task = [\n        task for task in content if int(task[\"id\"]) == int(input_title)\n    ][0]\n    print(\"TAREFA SELECIONADA:\")\n    print(return_formatted_values(value_task))\ndef db_insert_task():",
+        "detail": "Task_manager.source.data_base",
+        "documentation": {}
+    },
+    {
+        "label": "db_insert_task",
+        "kind": 2,
+        "importPath": "Task_manager.source.data_base",
+        "description": "Task_manager.source.data_base",
+        "peekOfCode": "def db_insert_task():\n    title = input(\"Digite o título da nova tarefa: \")\n    description = input(\"Digite a descrição da nova tarefa: \")\n    insert_task(title, description)\ndef db_completed_task():\n    content = get_all_tasks()\n    tasks_not_complet = list_not_complet_task(content)\n    return_title_values(\"TODAS AS TAREFAS INCOMPLETAS\", tasks_not_complet)\n    get_input = input(\n        \"Digite o número referente a função que você deseja completar: \"",
+        "detail": "Task_manager.source.data_base",
+        "documentation": {}
+    },
+    {
+        "label": "db_completed_task",
+        "kind": 2,
+        "importPath": "Task_manager.source.data_base",
+        "description": "Task_manager.source.data_base",
+        "peekOfCode": "def db_completed_task():\n    content = get_all_tasks()\n    tasks_not_complet = list_not_complet_task(content)\n    return_title_values(\"TODAS AS TAREFAS INCOMPLETAS\", tasks_not_complet)\n    get_input = input(\n        \"Digite o número referente a função que você deseja completar: \"\n    )\n    choosed_task = tasks_not_complet[int(get_input) - 1][\"id\"]\n    completed_task(choosed_task)\ndef db_update_task():",
+        "detail": "Task_manager.source.data_base",
+        "documentation": {}
+    },
+    {
+        "label": "db_update_task",
+        "kind": 2,
+        "importPath": "Task_manager.source.data_base",
+        "description": "Task_manager.source.data_base",
+        "peekOfCode": "def db_update_task():\n    content = get_all_tasks()\n    for index, value in enumerate(content):\n        print(f\"{index + 1} - Título - {value['title']}\")\n    input_title = int(input(\"Digite o número da tarefa desejada: \"))\n    print(\"Dados atuais da tarefa:\")\n    print(return_formatted_values(content[input_title - 1]))\n    update_menu()\n    selected_option_menu = input(\"Digite a opção de atualização: \")\n    if selected_option_menu == \"1\":",
         "detail": "Task_manager.source.data_base",
         "documentation": {}
     },
@@ -586,7 +741,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.data_base",
         "description": "Task_manager.source.data_base",
-        "peekOfCode": "def db_list_not_complet_tasks():\n    content = get_all_tasks()\n    return list_not_complet_task(content)\ndef db_remove_task():\n    content = get_all_tasks()\n    input_title = input(\"Digite o título da tafefa que você quer remover: \")\n    for value in content:\n        if value[\"title\"] == input_title:\n            remove_task(value[\"id\"])\n        else:",
+        "peekOfCode": "def db_list_not_complet_tasks():\n    content = get_all_tasks()\n    not_complet_task = list_not_complet_task(content)\n    print(\" TAREFAS INCOMPLETAS:\")\n    for index, value in enumerate(not_complet_task):\n        print(\n            f\"\"\"\n        Índice: {index + 1}\n        Título - {value['title']}\n        Descrição - {value['description']}",
         "detail": "Task_manager.source.data_base",
         "documentation": {}
     },
@@ -595,7 +750,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.data_base",
         "description": "Task_manager.source.data_base",
-        "peekOfCode": "def db_remove_task():\n    content = get_all_tasks()\n    input_title = input(\"Digite o título da tafefa que você quer remover: \")\n    for value in content:\n        if value[\"title\"] == input_title:\n            remove_task(value[\"id\"])\n        else:\n            return \"A tarefa não existe.\"",
+        "peekOfCode": "def db_remove_task():\n    database = get_all_tasks()\n    return_formatted_data_base_tasks(database)\n    input_id = input(\"Digite o Índice da tafefa que você quer remover: \")\n    for value in database:\n        if int(value[\"id\"]) is int(input_id):\n            remove_task(value[\"id\"])\n        else:\n            return \"A tarefa não existe.\"",
         "detail": "Task_manager.source.data_base",
         "documentation": {}
     },
@@ -631,7 +786,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.services",
         "description": "Task_manager.source.services",
-        "peekOfCode": "def update_task(id, new_title, new_description, new_completed):\n    content = get_all_tasks()\n    for index, value in enumerate(content):\n        if value[\"id\"] == id:\n            content[index] = {\n                \"title\": new_title,\n                \"description\": new_description,\n                \"completed\": new_completed,\n            }\n    with open(DATABASE_PATH, \"w\") as file:",
+        "peekOfCode": "def update_task(id, new_title, new_description, new_completed):\n    content = get_all_tasks()\n    for index, value in enumerate(content):\n        if value[\"id\"] == id:\n            content[index] = {\n                \"id\": id,\n                \"title\": new_title,\n                \"description\": new_description,\n                \"completed\": new_completed,\n            }",
         "detail": "Task_manager.source.services",
         "documentation": {}
     },
@@ -640,7 +795,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.services",
         "description": "Task_manager.source.services",
-        "peekOfCode": "def remove_task(id):\n    content = get_all_tasks()\n    new_list = []\n    if len(content) > 0:\n        for index, value in enumerate(content):\n            if content[index][\"id\"] != remove_zero(id):\n                new_list.append(value)\n    try:\n        with open(DATABASE_PATH, \"w\") as file:\n            file.write(json.dumps(new_list))",
+        "peekOfCode": "def remove_task(id):\n    content = get_all_tasks()\n    new_list = []\n    if len(content) > 0:\n        for value in content:\n            if int(value[\"id\"]) != int(id):\n                new_list.append(value)\n    try:\n        with open(DATABASE_PATH, \"w\") as file:\n            file.write(json.dumps(new_list))",
         "detail": "Task_manager.source.services",
         "documentation": {}
     },
