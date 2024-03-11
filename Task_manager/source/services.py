@@ -1,6 +1,5 @@
 from source.constants import DATABASE_PATH
 from source.util.service_util import (
-    remove_zero,
     prepare_values,
     sort_data_base,
 )
@@ -54,8 +53,8 @@ def remove_task(id):
     content = get_all_tasks()
     new_list = []
     if len(content) > 0:
-        for index, value in enumerate(content):
-            if content[index]["id"] != remove_zero(id):
+        for value in content:
+            if int(value["id"]) != int(id):
                 new_list.append(value)
     try:
         with open(DATABASE_PATH, "w") as file:

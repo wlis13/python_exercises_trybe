@@ -30,6 +30,18 @@ def return_formatted_list_value(value):
         return "Sim"
 
 
+def return_formatted_data_base_tasks(data_base):
+    for index, value in enumerate(data_base):
+        print(
+            f"""
+        Índice: {index + 1}
+        Título - {value["title"]}
+        Descrição - {value["description"]}
+        Completa? - {return_formatted_list_value(value["completed"])}
+        """
+        )
+
+
 def update_menu():
     print("1 - Alterar todos os dados")
     print("2 - Alterar um dos dados")

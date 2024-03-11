@@ -13,6 +13,7 @@ from source.util.data_base_util import (
     handle_update_one_value_task,
     return_formatted_list_value,
     return_title_values,
+    return_formatted_data_base_tasks,
 )
 
 
@@ -95,23 +96,25 @@ def db_update_task():
 def db_list_not_complet_tasks():
     content = get_all_tasks()
     not_complet_task = list_not_complet_task(content)
-    for value in not_complet_task:
+    print(" TAREFAS INCOMPLETAS:")
+    for index, value in enumerate(not_complet_task):
         print(
             f"""
-        TAREFAS INCOMPLETAS:
 
-        {value['title']}
-        {value['description']}
-        {return_formatted_list_value(value['completed'])}
+        Índice: {index + 1}
+        Título - {value['title']}
+        Descrição - {value['description']}
+        Completa? - {return_formatted_list_value(value['completed'])}
         """
         )
 
 
 def db_remove_task():
-    content = get_all_tasks()
-    input_id = input("Digite o título da tafefa que você quer remover: ")
-    for value in content:
-        if int(value["id"]) == int(input_id):
+    database = get_all_tasks()
+    return_formatted_data_base_tasks(database)
+    input_id = input("Digite o Índice da tafefa que você quer remover: ")
+    for value in database:
+        if int(value["id"]) is int(input_id):
             remove_task(value["id"])
         else:
             return "A tarefa não existe."
