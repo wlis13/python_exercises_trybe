@@ -40,6 +40,7 @@ def update_task(id, new_title, new_description, new_completed):
     for index, value in enumerate(content):
         if value["id"] == id:
             content[index] = {
+                "id": id,
                 "title": new_title,
                 "description": new_description,
                 "completed": new_completed,

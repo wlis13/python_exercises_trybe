@@ -7,14 +7,14 @@
   },
   {
     "id": "02",
-    "title": "Second title to task",
-    "description": "Second description to task",
-    "completed": true
+    "title": "New second title to task",
+    "description": "New second description to task",
+    "completed": false
   },
   {
     "id": "03",
-    "title": "Thirth title to task",
-    "description": "Thirth description to task",
-    "completed": true
+    "title": "New thirth title to task",
+    "description": "New thirth description to task",
+    "completed": false
   }
 ]
