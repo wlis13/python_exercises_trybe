@@ -30,7 +30,11 @@ def sort_id(id, content):
 
 def time_formatte():
     time = datetime.now().isoformat()
-    time = time.split()
+    time_date = time[:10]
+    list_date = time_date.split("-")
+    formatter_date = f"{list_date[2]}/{list_date[1]}/{list_date[0]}"
+    time = time[11:19]
+    return f"{formatter_date} {time}"
 
 
 def prepare_values(title, description, content):
@@ -40,7 +44,7 @@ def prepare_values(title, description, content):
         "title": title,
         "description": description,
         "completed": False,
-        "creation_date": datetime.now().isoformat(),
+        "creation_date": time_formatte(),
     }
 
 
