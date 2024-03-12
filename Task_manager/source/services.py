@@ -34,19 +34,17 @@ def insert_task(title, description):
         file.write(json.dumps(content))
 
 
-def update_task(id, new_title, new_description, new_completed):
-    content = get_all_tasks()
-    for index, value in enumerate(content):
-        if value["id"] == id:
-            content[index] = {
-                "id": id,
-                "title": new_title,
-                "description": new_description,
-                "completed": new_completed,
-            }
+def update_task(id, task):
+    if isinstance(task, dict):
+        content = get_all_tasks()
+        for index, value in enumerate(content):
+            if int(value["id"]) == int(id):
+                content[index] = task
 
-    with open(DATABASE_PATH, "w") as file:
-        file.write(json.dumps(content))
+        with open(DATABASE_PATH, "w") as file:
+            file.write(json.dumps(content))
+    else:
+        print(task)
 
 
 def remove_task(id):

@@ -42,10 +42,22 @@ def return_formatted_data_base_tasks(data_base):
         )
 
 
+def return_formatted_data_base_title_tasks(data_base):
+    if len(data_base) > 0:
+        for index, value in enumerate(data_base):
+            print(f"Índice: {index + 1} -> Título - {value['title']}")
+    else:
+        print("VOCÊ NÃO TEM TAREFAS.")
+
+
 def update_menu():
-    print("1 - Alterar todos os dados")
-    print("2 - Alterar um dos dados")
-    print("3 - Manter os dados atuais")
+    print(
+        """
+    1 - Alterar todos os dados
+    2 - Alterar um dos dados
+    3 - Manter os dados atuais
+    """
+    )
 
 
 def handle_boolean_value(value):
@@ -57,7 +69,14 @@ def handle_boolean_value(value):
         return "Opção inválida."
 
 
-def handle_update_all_value_task(input_value):
+def handle_add_value_task(task, new_title, new_description, new_completed):
+    task["title"] = new_title
+    task["description"] = new_description
+    task["completed"] = new_completed
+    return task
+
+
+def handle_update_all_value_task(input_value, task):
     if input_value == "1":
         new_title = input("Digite o novo título: ")
         new_description = input("Digite a nova descrição: ")
@@ -65,11 +84,12 @@ def handle_update_all_value_task(input_value):
         print("1 - Sim")
         print("2 - Não")
         new_completed = input("Digite 1 para Sim e 2 para Não: ")
-        return [
+        return handle_add_value_task(
+            task,
             new_title,
             new_description,
             handle_boolean_value(new_completed),
-        ]
+        )
     else:
         return "Opção inválida."
 
@@ -87,10 +107,12 @@ def handle_select_description(description, task):
 def handle_select_completed(completed, task):
     if completed == "1":
         task["completed"] = True
-    else:
+        return task
+    elif completed == "2":
         task["completed"] = False
-
-    return task
+        return task
+    else:
+        print("Opção inválida.")
 
 
 def handle_update_one_value_task(input_value, task):
