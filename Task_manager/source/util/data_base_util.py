@@ -3,15 +3,19 @@ def list_not_complet_task(content):
     return tasks
 
 
-def return_formatted_values(task):
-    if task["completed"] is False:
-        completed = "Não"
+def return_formatted_complete(value):
+    if value is False:
+        return "Não"
     else:
-        completed = "Sim"
+        return "Sim"
+
+
+def return_formatted_values(task):
     return f"""
     Título - {task["title"]}
     Descrição - {task["description"]}
-    Completa - {completed}
+    Completa - {return_formatted_complete(task["completed"])}
+    Data de criação - {task["creation_date"]}
     """
 
 
@@ -23,13 +27,6 @@ def return_title_values(title, data_base):
     print()
 
 
-def return_formatted_list_value(value):
-    if value is False:
-        return "Não"
-    else:
-        return "Sim"
-
-
 def return_formatted_data_base_tasks(data_base):
     for index, value in enumerate(data_base):
         print(
@@ -37,7 +34,8 @@ def return_formatted_data_base_tasks(data_base):
         Índice: {index + 1}
         Título - {value["title"]}
         Descrição - {value["description"]}
-        Completa? - {return_formatted_list_value(value["completed"])}
+        Completa? - {return_formatted_complete(value["completed"])}
+        Data de criação - {value["creation_date"]}
         """
         )
 

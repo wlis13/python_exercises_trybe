@@ -169,7 +169,7 @@
         "documentation": {}
     },
     {
-        "label": "return_formatted_list_value",
+        "label": "return_formatted_complete",
         "importPath": "source.util.data_base_util",
         "description": "source.util.data_base_util",
         "isExtraImport": true,
@@ -532,7 +532,16 @@
         "kind": 2,
         "importPath": "Task_manager.source.util.data_base_util",
         "description": "Task_manager.source.util.data_base_util",
-        "peekOfCode": "def list_not_complet_task(content):\n    tasks = [task for task in content if task[\"completed\"] is False]\n    return tasks\ndef return_formatted_values(task):\n    if task[\"completed\"] is False:\n        completed = \"Não\"\n    else:\n        completed = \"Sim\"\n    return f\"\"\"\n    Título - {task[\"title\"]}",
+        "peekOfCode": "def list_not_complet_task(content):\n    tasks = [task for task in content if task[\"completed\"] is False]\n    return tasks\ndef return_formatted_complete(value):\n    if value is False:\n        return \"Não\"\n    else:\n        return \"Sim\"\ndef return_formatted_values(task):\n    return f\"\"\"",
+        "detail": "Task_manager.source.util.data_base_util",
+        "documentation": {}
+    },
+    {
+        "label": "return_formatted_complete",
+        "kind": 2,
+        "importPath": "Task_manager.source.util.data_base_util",
+        "description": "Task_manager.source.util.data_base_util",
+        "peekOfCode": "def return_formatted_complete(value):\n    if value is False:\n        return \"Não\"\n    else:\n        return \"Sim\"\ndef return_formatted_values(task):\n    return f\"\"\"\n    Título - {task[\"title\"]}\n    Descrição - {task[\"description\"]}\n    Completa - {return_formatted_complete(task[\"completed\"])}",
         "detail": "Task_manager.source.util.data_base_util",
         "documentation": {}
     },
@@ -541,7 +550,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.util.data_base_util",
         "description": "Task_manager.source.util.data_base_util",
-        "peekOfCode": "def return_formatted_values(task):\n    if task[\"completed\"] is False:\n        completed = \"Não\"\n    else:\n        completed = \"Sim\"\n    return f\"\"\"\n    Título - {task[\"title\"]}\n    Descrição - {task[\"description\"]}\n    Completa - {completed}\n    \"\"\"",
+        "peekOfCode": "def return_formatted_values(task):\n    return f\"\"\"\n    Título - {task[\"title\"]}\n    Descrição - {task[\"description\"]}\n    Completa - {return_formatted_complete(task[\"completed\"])}\n    Data de criação - {task[\"creation_date\"]}\n    \"\"\"\ndef return_title_values(title, data_base):\n    print(title)\n    print()",
         "detail": "Task_manager.source.util.data_base_util",
         "documentation": {}
     },
@@ -550,16 +559,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.util.data_base_util",
         "description": "Task_manager.source.util.data_base_util",
-        "peekOfCode": "def return_title_values(title, data_base):\n    print(title)\n    print()\n    for index, data in enumerate(data_base):\n        print(f\"{index + 1} - {data['title']}\")\n    print()\ndef return_formatted_list_value(value):\n    if value is False:\n        return \"Não\"\n    else:",
-        "detail": "Task_manager.source.util.data_base_util",
-        "documentation": {}
-    },
-    {
-        "label": "return_formatted_list_value",
-        "kind": 2,
-        "importPath": "Task_manager.source.util.data_base_util",
-        "description": "Task_manager.source.util.data_base_util",
-        "peekOfCode": "def return_formatted_list_value(value):\n    if value is False:\n        return \"Não\"\n    else:\n        return \"Sim\"\ndef return_formatted_data_base_tasks(data_base):\n    for index, value in enumerate(data_base):\n        print(\n            f\"\"\"\n        Índice: {index + 1}",
+        "peekOfCode": "def return_title_values(title, data_base):\n    print(title)\n    print()\n    for index, data in enumerate(data_base):\n        print(f\"{index + 1} - {data['title']}\")\n    print()\ndef return_formatted_data_base_tasks(data_base):\n    for index, value in enumerate(data_base):\n        print(\n            f\"\"\"",
         "detail": "Task_manager.source.util.data_base_util",
         "documentation": {}
     },
@@ -568,7 +568,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.util.data_base_util",
         "description": "Task_manager.source.util.data_base_util",
-        "peekOfCode": "def return_formatted_data_base_tasks(data_base):\n    for index, value in enumerate(data_base):\n        print(\n            f\"\"\"\n        Índice: {index + 1}\n        Título - {value[\"title\"]}\n        Descrição - {value[\"description\"]}\n        Completa? - {return_formatted_list_value(value[\"completed\"])}\n        \"\"\"\n        )",
+        "peekOfCode": "def return_formatted_data_base_tasks(data_base):\n    for index, value in enumerate(data_base):\n        print(\n            f\"\"\"\n        Índice: {index + 1}\n        Título - {value[\"title\"]}\n        Descrição - {value[\"description\"]}\n        Completa? - {return_formatted_complete(value[\"completed\"])}\n        Data de criação - {value[\"creation_date\"]}\n        \"\"\"",
         "detail": "Task_manager.source.util.data_base_util",
         "documentation": {}
     },
@@ -739,7 +739,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.data_base",
         "description": "Task_manager.source.data_base",
-        "peekOfCode": "def db_get_all_tasks():\n    if len(DATA_BASE) > 0:\n        print(\"TODAS AS TAREFAS:\")\n        for index, value in enumerate(DATA_BASE):\n            print(f\"Índice: ({index + 1})---------------------------\")\n            print(\n                f\"\"\"\n            Título - {value[\"title\"]}\n            Descrição - {value[\"description\"]}\n            Completa - {return_formatted_list_value(value[\"completed\"])}",
+        "peekOfCode": "def db_get_all_tasks():\n    if len(DATA_BASE) > 0:\n        print(\"TODAS AS TAREFAS:\")\n        for index, value in enumerate(DATA_BASE):\n            print(f\"Índice: ({index + 1})---------------------------\")\n            print(\n                f\"\"\"\n            Título - {value[\"title\"]}\n            Descrição - {value[\"description\"]}\n            Completa - {return_formatted_complete(value[\"completed\"])}",
         "detail": "Task_manager.source.data_base",
         "documentation": {}
     },
@@ -784,7 +784,7 @@
         "kind": 2,
         "importPath": "Task_manager.source.data_base",
         "description": "Task_manager.source.data_base",
-        "peekOfCode": "def db_list_not_complet_tasks():\n    not_complet_task = list_not_complet_task(DATA_BASE)\n    print(\" TAREFAS INCOMPLETAS:\")\n    for index, value in enumerate(not_complet_task):\n        print(\n            f\"\"\"\n        Índice: {index + 1}\n        Título - {value['title']}\n        Descrição - {value['description']}\n        Completa? - {return_formatted_list_value(value['completed'])}",
+        "peekOfCode": "def db_list_not_complet_tasks():\n    not_complet_task = list_not_complet_task(DATA_BASE)\n    print(\" TAREFAS INCOMPLETAS:\")\n    print(return_formatted_data_base_tasks(not_complet_task))\ndef db_remove_task():\n    return_formatted_data_base_tasks(DATA_BASE)\n    input_id = input(\"Digite o Índice da tafefa que você quer remover: \")\n    for value in DATA_BASE:\n        if int(value[\"id\"]) is int(input_id):\n            remove_task(value[\"id\"])",
         "detail": "Task_manager.source.data_base",
         "documentation": {}
     },

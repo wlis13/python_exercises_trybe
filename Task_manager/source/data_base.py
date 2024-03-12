@@ -13,7 +13,7 @@ from source.util.data_base_util import (
     update_menu,
     handle_update_all_value_task,
     handle_update_one_value_task,
-    return_formatted_list_value,
+    return_formatted_complete,
     return_title_values,
     return_formatted_data_base_tasks,
     return_formatted_data_base_title_tasks,
@@ -29,7 +29,8 @@ def db_get_all_tasks():
                 f"""
             Título - {value["title"]}
             Descrição - {value["description"]}
-            Completa - {return_formatted_list_value(value["completed"])}
+            Completa - {return_formatted_complete(value["completed"])}
+            Data de criação - {value["creation_date"]}
                 """
             )
     else:
@@ -94,16 +95,7 @@ def db_update_task():
 def db_list_not_complet_tasks():
     not_complet_task = list_not_complet_task(DATA_BASE)
     print(" TAREFAS INCOMPLETAS:")
-    for index, value in enumerate(not_complet_task):
-        print(
-            f"""
-
-        Índice: {index + 1}
-        Título - {value['title']}
-        Descrição - {value['description']}
-        Completa? - {return_formatted_list_value(value['completed'])}
-        """
-        )
+    print(return_formatted_data_base_tasks(not_complet_task))
 
 
 def db_remove_task():
