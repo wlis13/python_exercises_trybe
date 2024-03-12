@@ -1,10 +1,12 @@
+from source.services import DATA_BASE
+
 from source.services import (
     insert_task,
-    get_all_tasks,
     completed_task,
     remove_task,
     update_task,
 )
+
 from source.util.data_base_util import (
     list_not_complet_task,
     return_formatted_values,
@@ -17,19 +19,24 @@ from source.util.data_base_util import (
     return_formatted_data_base_title_tasks,
 )
 
-DATA_BASE = get_all_tasks()
-
 
 def db_get_all_tasks():
-    print("TODAS AS TAREFAS:")
-    for index, value in enumerate(DATA_BASE):
-        print(f"Índice: ({index + 1})---------------------------")
+    if len(DATA_BASE) > 0:
+        print("TODAS AS TAREFAS:")
+        for index, value in enumerate(DATA_BASE):
+            print(f"Índice: ({index + 1})---------------------------")
+            print(
+                f"""
+            Título - {value["title"]}
+            Descrição - {value["description"]}
+            Completa - {return_formatted_list_value(value["completed"])}
+                """
+            )
+    else:
         print(
-            f"""
-        Título - {value["title"]}
-        Descrição - {value["description"]}
-        Completa - {return_formatted_list_value(value["completed"])}
             """
+              -> VOCÊ NÃO TEM TAREFAS. <-
+              """
         )
 
 

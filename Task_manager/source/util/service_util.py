@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 def remove_zero(id):
     if int(id) < 10 and len(id) < 2:
         return f"0{id}"
@@ -25,6 +28,11 @@ def sort_id(id, content):
         return id
 
 
+def time_formatte():
+    time = datetime.now().isoformat()
+    time = time.split()
+
+
 def prepare_values(title, description, content):
     new_id = sort_id(create_id(content), content)
     return {
@@ -32,6 +40,7 @@ def prepare_values(title, description, content):
         "title": title,
         "description": description,
         "completed": False,
+        "creation_date": datetime.now().isoformat(),
     }
 
 
